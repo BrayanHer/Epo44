@@ -8,6 +8,7 @@
         <style>
             html, body {
                 height: 100%;
+                background-image:"public/Images/Seed.jpg";
             }
 
             body {
@@ -32,13 +33,19 @@
 
             .title {
                 font-size: 96px;
+                color:#cc1;
+                font-weight:bold;
             }
         </style>
     </head>
-    <body>
+    <body class="container-fluid" style=" background-image: url(Images/Seed.jpg);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:center;">
+
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Bienvenido a LARAVEL 5</div>
             </div>
         </div>
     </body>

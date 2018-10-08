@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/Registro','RutasView@V_Alumnos')->name('Registro');
+Route::get('/home','RutasView@index_Al')->name('home');
+Route::get('/RegistroPadres','RutasView@V_Padres')->name('RegistroPadres');
+//--method---Alias de la vista--/controlador----funcion----name+alias de la visa
+
