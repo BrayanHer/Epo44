@@ -36,16 +36,10 @@ hr{
             <div class="hidden-lg"><br><br></div>
                 <h3 class="page-header">
                     
-                    <small>Padres</small>
+                    <small>Datos del Padre</small>
                 </h3>
 				<hr color="black" size=1>
             </div>
-			<div id="mat"class="row col-md-12">
-			<div class="form-group">
-				<label for="ejemplo_email_1">Matricula</label>
-				<input type="number" class="form-control" id=""
-					placeholder="Introduce tu email">
-					</div>
 					</div>
 			<div class="form-group col-md-4">
 				<label for="ejemplo_email_1">Nombre</label>
@@ -131,7 +125,7 @@ hr{
 					</select>
 					</div>
 					</div>
-					<a href=""> 
+					<a href="{{route('RegistroMadre')}}"> 
 						<button type="submit" class="btn btn-success btn-md">
  					    <span  aria-hidden="true"></span> Avanzar </button></a>
 

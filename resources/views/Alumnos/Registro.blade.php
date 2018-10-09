@@ -94,6 +94,10 @@ hr{
 				<label for="ejemplo_email_1">Correo Electronico</label>
 				<input type="email" class="form-control" id="ejemplo_email_1">
 			</div>
+			<div class="form-group col-md-4">
+				<label for="ejemplo_email_1">Calle</label>
+				<input type="text" class="form-control" id="">
+					</div>
 			<div class="form-group col-md-2">
 				<label for="ejemplo_email_1">Num. Interior</label>
 				<input type="number" min="0"class="form-control" id="ejemplo_email_1">
