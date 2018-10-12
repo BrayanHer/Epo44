@@ -26,6 +26,13 @@ hr{
 .mat{
 	background:#ccc;
 }
+::-webkit-input-placeholder { /* Chrome */
+	font-size: 13px;
+}
+
+::-moz-placeholder{
+	font-size: 13px;
+}
 </style>
 
     
@@ -65,14 +72,14 @@ hr{
 					placeholder="Introduce tu Apellido Materno">
 			</div>
 
-			<div class="form-group col-md-4">
+			<div class="form-group col-md-1">
 				<label for="ejemplo_email_1">Edad</label>
-				<input type="Number" class="form-control" min="0" max="23"id="">
+				<input type="Number" class="form-control" min="0" max="18"id="">
 			</div>
 
-			<div class="form-group col-md-4">
+			<div class="form-group col-md-2">
 				<label for="ejemplo_email_1">Sexo</label>
-				<select type="text" class="form-control" id=""s>
+				<select type="text" class="form-control" id="">
 					<option value="M">Selecciona:</option>
 					<option value="M">Hombre</option>
 					<option value="F">Mujer</option>
@@ -81,19 +88,25 @@ hr{
 
 			<div class="form-group col-md-3">
 				<label for="ejemplo_email_1">Fecha de Nacimiento</label>
-				<input type="date" class="form-control" id="ejemplo_email_1">
+				<input type="date" class="form-control" id="ejemplo_email_1" >
 			</div>
 
-			<div class="form-group col-md-4">
+			<div class="form-group col-md-3">
+				<label for="ejemplo_email_1">CURP</label>
+				<input type="text" class="form-control" id="ejemplo_email_1"
+					placeholder="Introduce tu CURP">
+			</div>
+
+			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Celular</label>
 				<input type="text" class="form-control" id="ejemplo_email_1"
 					placeholder="Introduce tu Celular">
 			</div>
 
-			<div class="form-group col-md-4">
+			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Tel. Fijo</label>
 				<input type="text" class="form-control" id=""
-					placeholder="Introduce tu Teléfono Fijo">
+					placeholder="Introduce tu Tel. Fijo">
 			</div>
 
 			<div class="form-group col-md-3">
@@ -110,31 +123,29 @@ hr{
 
 			<div class="form-group col-md-2">
 				<label for="ejemplo_email_1">Núm. Interior</label>
-				<input type="number" min="0"class="form-control" id="ejemplo_email_1"
-					placeholder="Introduce tu Número Interior">
+				<input type="text" class="form-control" id="ejemplo_email_1"
+					placeholder="Introduce tu Núm. Int.">
 			</div>
 
 			<div class="form-group col-md-2">
 				<label for="ejemplo_email_1">Núm. Exterior</label>
-				<input type="number" min="0" class="form-control" id="ejemplo_email_1"
-					placeholder="Introduce tu Número Exterior">
+				<input type="text" class="form-control" id="ejemplo_email_1"
+					placeholder="Introduce tu Núm. Ext.">
+			</div>
+
+			<div class="form-group col-xl-2">
+				<label for="ejemplo_email_1">Código Postal</label>
+				<input type="number"min="0" class="form-control" id="ejemplo_email_1"
+					placeholder="Introduce tu CP">
+			</div>
+
+		  	<div class="form-group col-md-2">
+				<label for="ejemplo_email_1">Estado</label>
+				<input type="number"min="0" class="form-control" id="ejemplo_email_1"
+					placeholder="Estado de México">
 			</div>
 
 			<div class="form-group col-md-2">
-				<label for="ejemplo_email_1">Código Postal</label>
-				<input type="number"min="0" class="form-control" id="ejemplo_email_1"
-					placeholder="Introduce tu Código Postal">
-			</div>
-
-			<div class="row col-md-12">
-
-			<div class="form-group col-md-3">
-				<label for="ejemplo_email_1">Estado</label>
-				<input type="number"min="0" class="form-control" id="ejemplo_email_1"
-					placeholder="Introduce tu Estado">
-			</div>
-
-			<div class="form-group col-md-3">
 				<label for="ejemplo_email_1">Municipio</label>
 				<select type="text" class="form-control" id=""s>
 					<option value="M">Selecciona:</option>
@@ -152,7 +163,7 @@ hr{
 				</select>
 			</div>
 			
-			</div>
+
 				<a href="{{route('RegistroPadres')}}"> 
 				<button type="submit" class="btn btn-success btn-md">
  				<span  aria-hidden="true"></span> Avanzar </button></a>
@@ -160,11 +171,11 @@ hr{
 					
 
 
-  
+
 
 <!------------------------------------------------------------------------------------------------------------------------------------->			
-  </div>
-  </div>
+</div>
+</div>
 </body>
 </html>
 	
