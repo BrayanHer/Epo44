@@ -33,6 +33,6 @@ class Cursos extends Migration
     }
     public function down()
     {
-        Schema::drop('mestros');
+        Schema::drop('cursos');
     }
 }

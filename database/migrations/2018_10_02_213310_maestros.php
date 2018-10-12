@@ -22,6 +22,6 @@ class Maestros extends Migration
     }
     public function down()
     {
-        Schema::drop('mestros');
+        Schema::drop('maestros');
     }
 }
