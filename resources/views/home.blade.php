@@ -65,6 +65,7 @@
   </header>
 
 <h1>Hola Edith</h1>
+<h1>Responde despues de descargar el git no se te olvide subir y poner la descripcion del cambio</h1>
 
 
   <script src="lib/jquery/jquery.min.js"></script>
