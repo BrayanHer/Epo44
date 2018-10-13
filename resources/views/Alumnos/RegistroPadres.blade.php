@@ -49,26 +49,26 @@ hr{
 
 			<div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Nombre</label>
-				<input type="text" class="form-control" id=""
+				<input type="text" class="form-control" id="Namep" name="Namep"
 					placeholder="Introduce su Nombre">
 			</div>
 
 			<div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Apellido Paterno</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control" id="patP" name="patP"
 					placeholder="Introduce su Apellido Paterno">
 			</div>
 
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">Apellido Materno</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control" id="MatP" name="MatP"
 					placeholder="Introduce su Apellido Materno">
 			</div>
 
 			
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">Celular</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control" id="CelP" name="CelP"
 					placeholder="Introduce su Número Celular">
 			</div>
 			<br><br>
@@ -83,26 +83,26 @@ hr{
 
 			<div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Nombre</label>
-				<input type="text" class="form-control" id=""
+				<input type="text" class="form-control"id="NameM" name="NameM"
 					placeholder="Introduce su Nombre">
 			</div>
 
 			<div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Apellido Paterno</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control"id="PatM" name="PatM"
 					placeholder="Introduce su Apellido Paterno">
 			</div>
 
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">Apellido Materno</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control" id="MatM" name="MatM"
 					placeholder="Introduce su Apellido Materno">
 			</div>
 
 			
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">Celular</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="number" class="form-control" id="CelM" name="CelM"
 					placeholder="Introduce Número Celular">
 			</div>	
 

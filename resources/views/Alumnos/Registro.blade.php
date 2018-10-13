@@ -49,37 +49,37 @@ hr{
 			<div id="mat"class="row col-xl-12">
 			 <div class="form-group">
 				<label for="ejemplo_email_1">Matrícula</label>
-				<input type="number" class="form-control" id=""
+				<input type="number" class="form-control" id="MatriA" name="MatriA"
 					placeholder="Introduce tu Matrícula" min="1">
 			 </div>
 			</div>
 
 			<div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Nombre</label>
-				<input type="text" class="form-control" id=""
+				<input type="text" class="form-control" id="NameA" name="NameA"
 					placeholder="Introduce tu Nombre">
 			</div>
 
 			<div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Apellido Paterno</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control"id="PatA" name="PatA"
 					placeholder="Introduce tu Apellido Paterno">
 			</div>
 
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">Apellido Materno</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control" id="MatA" name="MatA"
 					placeholder="Introduce tu Apellido Materno">
 			</div>
 
 			<div class="form-group col-xl-1">
 				<label for="ejemplo_email_1">Edad</label>
-				<input type="Number" class="form-control" min="0" max="18"id="">
+				<input type="Number" class="form-control" min="0" max="21" id="EdadA" name="EdadA">
 			</div>
 
 			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Sexo</label>
-				<select type="text" class="form-control" id="">
+				<select type="text" class="form-control" id="SexoA" name="SexoA">
 					<option value="M">Selecciona:</option>
 					<option value="M">Hombre</option>
 					<option value="F">Mujer</option>
@@ -88,66 +88,66 @@ hr{
 
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">Fecha de Nacimiento</label>
-				<input type="date" class="form-control" id="ejemplo_email_1" >
+				<input type="date" class="form-control" id="FnacA" name="FnacA" >
 			</div>
 
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">CURP</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control" id="CurpA" name="CurpA"
 					placeholder="Introduce tu CURP">
 			</div>
 
 			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Celular</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control" id="CelA" name="CelA"
 					placeholder="Introduce tu Celular">
 			</div>
 
 			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Tel. Fijo</label>
-				<input type="text" class="form-control" id=""
+				<input type="text" class="form-control" id="FijoA" name="FijoA"
 					placeholder="Introduce tu Tel. Fijo">
 			</div>
 
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">Correo Electrónico</label>
-				<input type="email" class="form-control" id="ejemplo_email_1" 
+				<input type="email" class="form-control" id="EmailA" name="EmailA"
 					placeholder="Introduce tu Correo Electrónico">
 			</div>
 
 			<div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Calle</label>
-				<input type="text" class="form-control" id=""
+				<input type="text" class="form-control" id="CalleA" name="CalleA"
 					placeholder="Introduce tu Calle">
 			</div>
 
 			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Núm. Interior</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control" id="IntA" name="IntA"
 					placeholder="Introduce tu Núm. Int.">
 			</div>
 
 			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Núm. Exterior</label>
-				<input type="text" class="form-control" id="ejemplo_email_1"
+				<input type="text" class="form-control" id="ExtA" name="ExtA"
 					placeholder="Introduce tu Núm. Ext.">
 			</div>
 
 			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Código Postal</label>
-				<input type="number"min="0" class="form-control" id="ejemplo_email_1"
+				<input type="number"min="0" class="form-control" id="CpA" name="CpA"
 					placeholder="Introduce tu CP">
 			</div>
 
 		  	<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Estado</label>
-				<input type="number"min="0" class="form-control" id="ejemplo_email_1"
+				<input type="number"min="0" class="form-control" id="EstA" name="EstA"
 					placeholder="Estado de México">
 			</div>
 
 			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Municipio</label>
-				<select type="text" class="form-control" id=""s>
+				<select type="text" class="form-control" id="MunA" name="MunA">
 					<option value="M">Selecciona:</option>
 					<option value="">Lerma</option>
 					<option value="">Temoaya</option>
@@ -156,7 +156,7 @@ hr{
 			
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">Localidad</label>
-				<select type="text" class="form-control" id=""s>
+				<select type="text" class="form-control" id="LocA" name="LocA">
 					<option value="M">Selecciona:</option>
 					<option value="M">San Pedro Arriba</option>
 					<option value="F">San Pedro Abajo</option>
