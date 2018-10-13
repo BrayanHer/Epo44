@@ -11,7 +11,13 @@
             <script src="main.js"></script>
         </head>
         <body>
-            
+
+
+        <a href="{{route('RegistroPadres')}}"> 
+				<button type="submit" class="btn btn-success btn-md">
+ 				    <span  aria-hidden="true"></span> Avanzar 
+                </button>
+        </a>
         </body>
     </html>
 

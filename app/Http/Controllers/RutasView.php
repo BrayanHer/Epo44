@@ -20,7 +20,7 @@ class RutasView extends Controller
     {
         return view('Alumnos.RegistroPadres');
     }
-    public function V_Madres(){
-        return view('Alumnos.RegistroMadre');
+    public function V_Complemento(){
+        return view('Alumnos.RegistroComplementos');
     }
 }
