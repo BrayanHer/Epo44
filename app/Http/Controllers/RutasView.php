@@ -23,4 +23,7 @@ class RutasView extends Controller
     public function V_Complemento(){
         return view('Alumnos.RegistroComplementos');
     }
+    public function V_Acerca(){
+        return view('ContenidoWeb.AcercaEpo');
+    }
 }

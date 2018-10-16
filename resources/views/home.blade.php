@@ -55,7 +55,7 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="{{route('home')}}">Inicio</a></li>
           <li><a href="">Servicios y Tramites</a></li><!--poner la vista respectiva con el codigo "('aqui va el nombre de la ruta')"-->
-          <li><a href="">Acerca de la EPO No.44</a></li>
+          <li><a href="{{route('Acerca')}}">Acerca de la EPO No.44</a></li>
           <li><a href="">Vinculación</a></li>
           <li><a href="{{route('Registro')}}">Estudiantes</a></li>
           <li><a href="">Ubicación</a></li>
