@@ -15,10 +15,12 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/Registro','RutasView@V_Alumnos')->name('Registro');
+//Route::get('/Registro','RutasView@V_Alumnos')->name('Registro');
 Route::get('/home','RutasView@index_Al')->name('home');
 Route::get('/RegistroPadres','RutasView@V_Padres')->name('RegistroPadres');
 Route::get('/Complemento','RutasView@V_Complemento')->name('Complemento');
 Route::get('/Acerca','RutasView@V_Acerca')->name('Acerca');
 //--method---Alias de la vista--/controlador----funcion----name+alias de la visa
+Route::get('/Registro','Alumno@V_Alumnos')->name('Registro');
+Route::POST('/insertalumno','Alumno@insertalumno')->name('insertalumno');
 

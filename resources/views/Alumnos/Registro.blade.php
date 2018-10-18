@@ -37,6 +37,8 @@ hr{
 
     
 <body>
+<form action="{{route('insertalumno')}}" method="POST">
+    {{csrf_field()}}
 <div class="container">
 <div class="row">
 		<div class="col-md-12">
@@ -144,16 +146,16 @@ hr{
 				<input type="number"min="0" class="form-control" id="EstA" name="EstA"
 					placeholder="Estado de México">
 			</div>
+@foreach($Id_muni as $muni)
 
 			<div class="form-group col-xl-2">
 				<label for="ejemplo_email_1">Municipio</label>
 				<select type="text" class="form-control" id="MunA" name="MunA">
 					<option value="M">Selecciona:</option>
-					<option value="">Lerma</option>
-					<option value="">Temoaya</option>
+					<option value="">{{$muni->Municipios}}</option>
 				</select>
 			</div>
-			
+@endforeach
 			<div class="form-group col-xl-3">
 				<label for="ejemplo_email_1">Localidad</label>
 				<select type="text" class="form-control" id="LocA" name="LocA">
@@ -164,9 +166,8 @@ hr{
 			</div>
 			
 
-				<a href="{{route('Complemento')}}"> 
-				<button type="submit" class="btn btn-success btn-md">
- 				<span  aria-hidden="true"></span> Avanzar </button></a>
+				
+				<button type="submit" class="btn btn-success btn-md">Avanzar </button>
 
 					
 
@@ -176,6 +177,7 @@ hr{
 <!------------------------------------------------------------------------------------------------------------------------------------->			
 </div>
 </div>
+</form>
 </body>
 </html>
 	
