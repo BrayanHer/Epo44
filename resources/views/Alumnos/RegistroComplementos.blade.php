@@ -13,7 +13,7 @@
         <body>
 
 
-        <a href="{{route('RegistroPadres')}}"> 
+        <a href="{{route('Pueba')}}"> 
 				<button type="submit" class="btn btn-success btn-md">
  				    <span  aria-hidden="true"></span> Avanzar 
                 </button>

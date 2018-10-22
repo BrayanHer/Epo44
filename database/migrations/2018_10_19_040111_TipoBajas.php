@@ -1,10 +1,11 @@
 <?php
- use Illuminate\Database\Schema\Blueprint;
- use Illuminate\Database\Migrations\Migration;
 
-    class Tipobajas extends Migration
-    {
-        public function up()
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class TipoBajas extends Migration
+{
+    public function up()
         {
             Schema::create('tipoBajas',function(Blueprint $table)
             {
@@ -19,4 +20,4 @@
         {
             Schema::drop('tipoBajas');
         }
-    }
+}

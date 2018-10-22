@@ -1,14 +1,15 @@
 <?php
- use Illuminate\Database\Schema\Blueprint;
- use Illuminate\Database\Migrations\Migration;
 
-    class Alumnos extends Migration
-    {
-        public function up() 
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class Alumnos extends Migration
+{
+   public function up() 
         {
             Schema::create('alumnos',function(Blueprint $table)
             {
-                $table->increments('IdMatricula');         
+                $table->integer('IdMatricula',10);         
                 $table->string('Nombre',50);
                 $table->string('APaterno',50);
                 $table->string('AMaterno',50);
@@ -53,4 +54,4 @@
         {
             Schema::drop('alumnos');
         }
-    }
+}

@@ -1,16 +1,17 @@
 <?php
- use Illuminate\Database\Schema\Blueprint;
- use Illuminate\Database\Migrations\Migration;
 
-    class Statusestudiantes extends Migration
-    {
-        public function up()
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class StatusEstudiantes extends Migration
+{
+    public function up()
         {
             Schema::create('statusEstudiantes',function(Blueprint $table)
             {
                 $table->increments('IdStatus');
 
-                $table->integer('IdMatricula')->unsigned();
+                $table->integer('IdMatricula');
                 $table->foreign('IdMatricula')->references('IdMatricula')->on('alumnos');
                 
                 $table->integer('IdTipoBaja')->unsigned();
@@ -29,4 +30,4 @@
         {
             Schema::drop('statusEstudiantes');
         }
-    }
+}

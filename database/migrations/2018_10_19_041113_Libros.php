@@ -1,12 +1,13 @@
 <?php
- use Illuminate\Database\Schema\Blueprint;
- use Illuminate\Database\Migrations\Migration;
 
-    class Libros extends Migration
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class Libros extends Migration
+{
+    public function up()
     {
-        public function up()
-        {
-            Schema::create('libros',function(Blueprint $table)
+        Schema::create('libros',function(Blueprint $table)
             {
                 $table->increments('IdLibro');
                 $table->string('Titulo', 40);
@@ -15,7 +16,7 @@
                 $table->foreign('IdAutor')->references('IdAutor')->on('autores');
                 
                 $table->integer('IdEditorial')->unsigned();
-		        $table->foreign('IdEditorial')->references('IdEditorial')->on('editoriales');
+                $table->foreign('IdEditorial')->references('IdEditorial')->on('editoriales');
    
                 $table->string('Edicion', 30);
                 $table->date('AnoPublicacion');
@@ -32,4 +33,4 @@
         {
             Schema::drop('libros');
         }
-    }
+}

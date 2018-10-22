@@ -1,10 +1,11 @@
 <?php
- use Illuminate\Database\Schema\Blueprint;
- use Illuminate\Database\Migrations\Migration;
 
-    class Materias extends Migration
-    {
-        public function up()
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class Materias extends Migration
+{
+   public function up()
         {
             Schema::create('materias',function(Blueprint $table)
             {
@@ -20,4 +21,4 @@
         {
             Schema::drop('materias');
         }
-    }
+}

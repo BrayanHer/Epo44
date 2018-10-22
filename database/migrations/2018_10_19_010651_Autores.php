@@ -1,10 +1,11 @@
 <?php
- use Illuminate\Database\Schema\Blueprint;
- use Illuminate\Database\Migrations\Migration;
 
-    class Autores extends Migration
-    {
-        public function up()
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class Autores extends Migration
+{
+    public function up()
         {
             Schema::create('autores',function(Blueprint $table)
             {
@@ -21,4 +22,4 @@
         {
             Schema::drop('autores');
         }
-    }
+}

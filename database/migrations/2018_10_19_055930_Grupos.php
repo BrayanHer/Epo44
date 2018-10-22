@@ -1,10 +1,11 @@
 <?php
- use Illuminate\Database\Schema\Blueprint;
- use Illuminate\Database\Migrations\Migration;
 
-    class Grupos extends Migration
-    {
-        public function up()
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class Grupos extends Migration
+{
+public function up()
         {
             Schema::create('grupos',function(Blueprint $table)
             {
@@ -23,4 +24,4 @@
         {
             Schema::drop('grupos');
         }
-    }
+}
