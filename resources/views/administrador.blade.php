@@ -38,7 +38,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="navbar.html">Estudiantes</a>
+              <a href="{{route('prueba')}}">Estudiantes</a>
             </li>
             <li>
               <a href="cards.html">Tareas</a>
@@ -193,11 +193,12 @@
           <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="login.html">Cerrar Sesión</a>
+            <a class="btn btn-primary" href="home">Cerrar Sesión</a>
           </div>
         </div>
       </div>
     </div>
+                  
     <!-- Bootstrap core JavaScript-->
     <script src="admin/vendor/jquery/jquery.min.js"></script>
     <script src="admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -213,6 +214,9 @@
     <script src="admin/js/sb-admin-datatables.min.js"></script>
     <script src="admin/js/sb-admin-charts.min.js"></script>
   </div>
+  <div>
+                        @yield('admincontent')
+                  </div>
 </body>
 
 </html>

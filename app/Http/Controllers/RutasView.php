@@ -28,9 +28,13 @@ class RutasView extends Controller
     }
 
     public function V_Admin(){
-        return view('Admin.Administrador');
+        return view('Administrador');
     }
     public function V_Login(){
         return view('Admin.login');
     }
+    public function V_ins(){
+        return view('Admin.Prueba');
+    }
+
 }
