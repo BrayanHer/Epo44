@@ -26,4 +26,11 @@ class RutasView extends Controller
     public function V_Acerca(){
         return view('ContenidoWeb.AcercaEpo');
     }
+
+    public function V_Admin(){
+        return view('Admin.Administrador');
+    }
+    public function V_Login(){
+        return view('Admin.login');
+    }
 }

@@ -20,7 +20,11 @@ Route::get('/home','RutasView@index_Al')->name('home');
 Route::get('/RegistroPadres','RutasView@V_Padres')->name('RegistroPadres');
 Route::get('/Complemento','RutasView@V_Complemento')->name('Complemento');
 Route::get('/Acerca','RutasView@V_Acerca')->name('Acerca');
+Route::get('/Login','RutasView@V_Login')->name('Login');
+Route::get('/Administrador','RutasView@V_Admin')->name('Administrador');
+
+
 //--method---Alias de la vista--/controlador----funcion----name+alias de la visa
-Route::get('/Registro','Alumno@V_Alumnos')->name('Registro');
-Route::POST('/insertalumno','Alumno@insertalumno')->name('insertalumno');
+Route::get('/Alumnos','Alumno@Alumnos')->name('Alumnos');
+Route::POST('/GAlumnos','Alumno@GAlumnos')->name('GAlumnos');
 
