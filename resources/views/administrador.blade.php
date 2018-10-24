@@ -74,13 +74,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti">
             <li>
-              <a href="#">Alta Libros</a>
+              <a href="{{route('AltasB')}}">Alta</a>
             </li>
             <li>
-              <a href="#">Alta Autores</a>
-            </li>
-            <li>
-              <a href="#">Alta Ediciones</a>
+              <a href="#">Consulta</a>
             </li>
             <li>
           </ul>
@@ -89,7 +86,7 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">Aministrador</span>
+            <span class="nav-link-text">Administrador</span>
           </a>
         </li>
       </ul>
@@ -157,17 +154,7 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
-      <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="#">Inicio</a>
-        </li>
-        <!-- <li class="breadcrumb-item active"></li> -->
-      </ol>
-     
-     
-          
-
+    
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
       <div class="container">
