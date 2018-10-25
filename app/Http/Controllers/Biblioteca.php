@@ -76,6 +76,14 @@
                 $APaterno=$request->APaterno;
                 $AMaterno=$request->AMaterno;		 
 
+
+                $this->validate($request,[
+                    'IdAutor'     => 'required|numeric',
+                    'Nombre'  =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                    'APaterno' =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                    'AMaterno'  =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
+                ]);
+
                 $Aut=new autores;
                 $Aut->IdAutor=$request->IdAutor;
                 $Aut->Nombre=$request->Nombre;        
