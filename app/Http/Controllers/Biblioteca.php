@@ -78,9 +78,9 @@
 
 
                 $this->validate($request,[
-                    'IdAutor'     => 'required|numeric',
-                    'Nombre'  =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-                    'APaterno' =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                    'IdAutor'   => 'required|numeric',
+                    'Nombre'    =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                    'APaterno'  =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
                     'AMaterno'  =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
                 ]);
 
@@ -113,6 +113,11 @@
             public function GEditoriales(Request $request){
                     $IdEditorial=$request->IdEditorial;        
                     $Editorial=$request->Editorial;
+
+                    $this->validate($request,[
+                        'IdEditorial'   => 'required|numeric',
+                        'Editorial'    =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
+                    ]);
                     
                     $Edi=new editoriales;
                     $Edi->IdEditorial=$request->IdEditorial;
@@ -125,7 +130,10 @@
             public function Gcategorias(Request $request){
                     $IdCategoria=$request->IdCategoria;        
                     $Categoria=$request->Categoria;
-                    
+                    $this->validate($request,[
+                        'IdCategoria'   => 'required|numeric',
+                        'Categoria'    =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
+                    ]);
                     $Cat=new categorias;
                     $Cat->IdCategoria=$request->IdCategoria;
                     $Cat->Categoria=$request->Categoria;
@@ -141,7 +149,18 @@
                     $Edicion=$request->Edicion;        
                     $AnoPublicacion=$request->AnoPublicacion;
                     $IdCategoria=$request->IdCategoria;
-            
+                    
+                    $this->validate($request,[
+                        'IdLibro'   => 'required|numeric',
+                        'Titulo'    =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                        'IdAutor'   => 'required|numeric',
+                        'IdEditorial'  => 'required|numeric',
+                        'Edicion'  =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                        'AnoPublicacion'    => 'required|date',
+                        'IdCategoria'   => 'required|numeric',
+                        
+                    ]);
+
                     $Lib=new libros;
                     $Lib->IdLibro=$request->IdLibro;
                     $Lib->Titulo=$request->Titulo;

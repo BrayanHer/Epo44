@@ -47,7 +47,7 @@ hr{
 
   <h1 align="center"> Altas </h1>
 	<br>
-	<table align="center">
+	<table>
 		<Thead>
 		<tr>
 <!-- Autores -->
@@ -257,7 +257,7 @@ hr{
 									<option value='{{$au->IdAutor}}'>{{$au->Nombre}} </option>
 								@endforeach
 							</select>
-
+							<br>	<br>
 						Seleccione Editorial: 
 							<select name='IdEditorial'>
          				@foreach($Editoriales as $ed)
@@ -279,8 +279,8 @@ hr{
 						@endif	
 						<div class="form-group col-xl-12">
 							<label for="ejemplo_email_1"> Año Publicación </label>
-							<input type="text" class="form-control" id="AnoPublicacion" name="AnoPublicacion" value="{{old('AnoPublicacion')}}" 
-														placeholder="Introduce el Año Publicación">
+							<input type="Date" class="form-control" id="AnoPublicacion" name="AnoPublicacion" value="{{old('AnoPublicacion')}}" 
+	2w													placeholder="Introduce el Año Publicación">
 						</div>
 
 						Seleccione categoria: 

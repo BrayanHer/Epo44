@@ -24,23 +24,6 @@
   </ul>
   <div id="tabs-1">
   <style>
-* {
-	margin:1px;
-	padding:1px;
-}
- 
-body {
-	background:#fff;
-}
-.container{
-	background:;
-}
-hr{
-	width:90%;
-}
-.mat{
-	background:#ccc;
-}
 ::-webkit-input-placeholder { /* Chrome */
 	font-size: 13px;
 }
@@ -52,7 +35,7 @@ hr{
 
     
 <body>
-<form action="{{route('Alumnos')}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('GAlumnos')}}" method="POST" enctype="multipart/form-data">
     {{csrf_field()}}
 <div class="container">
 <div class="row">
@@ -201,18 +184,27 @@ hr{
 				<input type="number"min="0" class="form-control" id="Estado" name="Estado"
 					placeholder="Estado de México" value="Estado de México" readonly>
 			</div>
-
-
 			
-<div>
-<button type="submit" class="btn btn-success btn-md">Avanzar </button>
+@foreach($Municipios as $muni)
+
+<div class="form-group col-xl-2">
+	<label for="ejemplo_email_1">Municipio</label>
+	<select type="text" class="form-control" id="IdMun" name="IdMun" >
+		<option value="M">Selecciona:</option>
+		<option value="{{$muni->IdMun}}">{{$muni->Municipios}}</option>
+	</select>
 </div>
-				
-				
+@endforeach
 
-					
-
-
+@foreach($Localidades as $loc)
+<div class="form-group col-xl-3">
+	<label for="ejemplo_email_1">Localidad</label>
+	<select type="text" class="form-control" id="IdLoc" name="IdLoc">
+		<option value="M">Selecciona:</option>
+		<option value="{{$loc->IdLoc}}">{{$loc->Localidad}}</option>
+	</select>
+</div>
+@endforeach
 
 
 <!------------------------------------------------------------------------------------------------------------------------------------->			
@@ -226,6 +218,7 @@ hr{
   </div>
 
   <div id="tabs-3">
+  <div class="container">
   <div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Nombre</label>
 				<input type="text" class="form-control" id="Namep" name="Namep"
@@ -284,13 +277,9 @@ hr{
 				<input type="number" class="form-control" id="CelM" name="CelM"
 					placeholder="Introduce Número Celular">
 			</div>	
-
+			</div>
 <!------------------------------------------------------------------------------------------------------------------------------------->			
   </div>
-  <div >
-				<button type="submit" class="btn btn-success btn-md">
- 				<span  aria-hidden="true"></span> Enviar </button>
-			</div>
   </div>
   </div>
 

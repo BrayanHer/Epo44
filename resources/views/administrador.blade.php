@@ -38,7 +38,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="{{route('prueba')}}">Estudiantes</a>
+              <a href="{{route('Alumnos')}}">Estudiantes</a>
             </li>
             <li>
               <a href="cards.html">Tareas</a>

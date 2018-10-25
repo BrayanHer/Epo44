@@ -5,23 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Alumnos;
-use App\Autores;
-use App\Editoriales;
-use App\Categorias;
 use App\Municipios;
-use App\Materias;
-use App\Maestros;
-use App\tipoBajas;
-use App\Libros;
 use App\Localidades;
-use App\Cursos;
-use App\grupos;
-use App\Periodos;
-use App\Turnos;
-use App\PrestamoLibros;
-use App\Formaciones;
-use App\Tramites;
-use App\StatusEstudiantes;
+
 
 
 class Alumno extends Controller
@@ -33,7 +19,7 @@ class Alumno extends Controller
 	 	 $Localidades = Localidades::orderBy('IdLoc', 'asc')
      	 						->get();
 				
-     	 return view ("Alumnos.Registro")
+     	 return view ("admin.Prueba")
 				->with('Municipios', $Municipios)
 				->with('Localidades', $Localidades);
 
@@ -71,7 +57,38 @@ class Alumno extends Controller
 			$FolioAsignado=$request->FolioAsignado;
 			$SecProcedencia=$request->SecProcedencia;        
 			$CertificadoSec=$request->CertificadoSec;
-			
+			$this->validate($request,[
+				'IdMatricula'   => 'required|numeric',
+				'Nombre'    	=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'APaterno'    	=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'AMaterno'    	=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'Edad'    		=>'required|integer|min:14',
+				'Sexo'    		=>['regex:/^[A-Z]'],
+				'FechaNac'    	=>'required|date',
+				'Celular'    	=>['regex:/^[0-9]{10}$/'],
+				'TelFijo'    	=>['regex:/^[0-9]{10}$/'],
+				'Email'   		=> 'required|email',
+				'NumInt'    	=>['regex:/^[A-Z,a-z, ,ñ,é,ó,á,í,ú,0-9]+$/'],
+				'NumExt'    	=>['regex:/^[A-Z,a-z, ,ñ,é,ó,á,í,ú,0-9]+$/'],
+				'CodigoPostal'  =>['regex:/^[0-9]{5}$/'],
+				'Estado'    	=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'IdMun'    		=>'required|numeric',
+				'IdLoc'    		=>'required|numeric',
+				'NombrePadre'   =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'APPadre'    	=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'AMPadre'    	=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'CelularPadre'  =>['regex:/^[0-9]{10}$/'],
+				'NombreMadre'   =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'APMadre'    	=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'AMMadre'    	=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+				'CelularMadre' =>['regex:/^[0-9]{10}$/'],
+				'Curp'    		=>['regex:/^[A-Z]{4}[0-9]{6}[A-Z]{6}+$/'],
+				'ActNacimiento' => 'image|mimes:jpeg,png,gif',
+				'FolioAsignado' =>['regex:/^[0-9]{10}$/'],
+				'CertificadoSec'=> 'image|mimes:jpeg,png,gif'
+
+				
+			]);
 			
 			$Per=new Alumnos;
 			$Per->IdMatricula=$request->IdMatricula;
