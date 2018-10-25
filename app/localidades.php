@@ -10,4 +10,3 @@ class localidades extends Model
     protected $primaryKey ='IdLoc';
     protected $fillable=['IdLoc','Localidad','IdMun'];
 }
-

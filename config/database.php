@@ -66,20 +66,6 @@ return [
             'engine' => null,
         ],
 
-        /*'mysql' => [
-            'driver' => 'mysql',
-            'host' => env('DB_HOST', 'mysql.epo44.org'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'epo44base'),
-            'username' => env('DB_USERNAME', 'karen6173488'),
-            'password' => env('DB_PASSWORD', 'karen72845899'),
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-            'strict' => false,
-            'engine' => null,
-        ],*/
-
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),

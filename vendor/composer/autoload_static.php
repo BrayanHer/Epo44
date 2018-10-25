@@ -4,16 +4,16 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
+class ComposerStaticInit609c0e6512dba38045ef5b9526b2a0c5
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
     );
@@ -65,10 +65,6 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
         array (
             'League\\Flysystem\\' => 17,
         ),
-        'J' => 
-        array (
-            'JakubOnderka\\PhpConsoleColor\\' => 29,
-        ),
         'I' => 
         array (
             'Illuminate\\' => 11,
@@ -81,12 +77,12 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
         array (
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
-            'Doctrine\\Common\\Inflector\\' => 26,
         ),
         'C' => 
         array (
             'Cron\\' => 5,
             'ClassPreloader\\' => 15,
+            'Carbon\\' => 7,
         ),
         'A' => 
         array (
@@ -98,8 +94,8 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -197,10 +193,6 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
-        'JakubOnderka\\PhpConsoleColor\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
-        ),
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
@@ -217,10 +209,6 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
-        'Doctrine\\Common\\Inflector\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
-        ),
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
@@ -229,14 +217,14 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
         array (
             0 => __DIR__ . '/..' . '/classpreloader/classpreloader/src',
         ),
+        'Carbon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
-    );
-
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -260,23 +248,26 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
             array (
                 0 => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src',
             ),
+            'JakubOnderka\\PhpConsoleColor' => 
+            array (
+                0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
+            ),
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Inflector\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
+            ),
         ),
     );
 
     public static $classMap = array (
-        'Alumnos' => __DIR__ . '/../..' . '/database/migrations/2018_10_20_022016_Alumnos.php',
-        'Autores' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_010651_Autores.php',
-        'Categorias' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_021703_Categorias.php',
-        'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
-        'Cursos' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_053423_Cursos.php',
+        'Carreras' => __DIR__ . '/../..' . '/database/migrations/2018_09_17_215915_carreras.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
-        'Editoriales' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_015614_Editoriales.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
-        'Formaciones' => __DIR__ . '/../..' . '/database/migrations/2018_10_20_212407_Formaciones.php',
-        'Grupos' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_055930_Grupos.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',
@@ -346,11 +337,7 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
-        'Libros' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_041113_Libros.php',
-        'Localidades' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_052826_Localidades.php',
-        'Maestros' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_030438_Maestros.php',
-        'Materias' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_025414_Materias.php',
-        'Municipios' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_023338_Municipios.php',
+        'Maestros' => __DIR__ . '/../..' . '/database/migrations/2018_09_17_222541_maestros.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -756,8 +743,6 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
-        'Periodos' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_192844_Periodos.php',
-        'PrestamoLibros' => __DIR__ . '/../..' . '/database/migrations/2018_10_20_031321_PrestamoLibros.php',
         'SebastianBergmann\\Comparator\\ArrayComparator' => __DIR__ . '/..' . '/sebastian/comparator/src/ArrayComparator.php',
         'SebastianBergmann\\Comparator\\Comparator' => __DIR__ . '/..' . '/sebastian/comparator/src/Comparator.php',
         'SebastianBergmann\\Comparator\\ComparisonFailure' => __DIR__ . '/..' . '/sebastian/comparator/src/ComparisonFailure.php',
@@ -794,22 +779,17 @@ class ComposerStaticInit2f9bc9453bac101413d931deb8be6601
         'SebastianBergmann\\RecursionContext\\Exception' => __DIR__ . '/..' . '/sebastian/recursion-context/src/Exception.php',
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
-        'StatusEstudiantes' => __DIR__ . '/../..' . '/database/migrations/2018_10_20_214140_StatusEstudiantes.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-        'TipoBajas' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_040111_TipoBajas.php',
-        'Tramites' => __DIR__ . '/../..' . '/database/migrations/2018_10_20_211626_Tramites.php',
-        'Turnos' => __DIR__ . '/../..' . '/database/migrations/2018_10_19_204649_Turnos.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit2f9bc9453bac101413d931deb8be6601::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit2f9bc9453bac101413d931deb8be6601::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit2f9bc9453bac101413d931deb8be6601::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit2f9bc9453bac101413d931deb8be6601::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit2f9bc9453bac101413d931deb8be6601::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit609c0e6512dba38045ef5b9526b2a0c5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit609c0e6512dba38045ef5b9526b2a0c5::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit609c0e6512dba38045ef5b9526b2a0c5::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit609c0e6512dba38045ef5b9526b2a0c5::$classMap;
 
         }, null, ClassLoader::class);
     }
