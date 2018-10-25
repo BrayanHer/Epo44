@@ -23,3 +23,7 @@ Route::POST('/GAlumnos','Alumno@GAlumnos')->name('GAlumnos');
 Route::get('/AltasB','Biblioteca@AltasB')->name('AltasB');
 Route::POST('/GAutor','Biblioteca@GAutor')->name('GAutor');
 Route::POST('/GEditoriales','Biblioteca@GEditoriales')->name('GEditoriales');
+Route::POST('/Gcategorias','Biblioteca@Gcategorias')->name('Gcategorias');
+Route::POST('/Glibros','Biblioteca@Glibros')->name('Glibros');
+
+
