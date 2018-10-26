@@ -214,11 +214,41 @@
   </div>
 
   <div id="tabs-2">
+<div class="container">
+<div class="row">
+<div class="form-group col-xl-3">
+				<label for="ejemplo_email_1">Curp</label>
+				<input type="text" class="form-control" id="Curp" name="Curp"
+					placeholder="Introduce su Apellido Paterno">
+			</div>
+			<div class="form-group col-xl-4">
+				<label for="ejemplo_email_1">Secundaria de Procedencia</label>
+				<input type="text" class="form-control" id="SecProcedencia" name="SecProcedencia"
+					placeholder="Introduce su Apellido Paterno">
+			</div>
+			<div class="form-group col-xl-4">
+				<label for="ejemplo_email_1">Folio Asigando en Pre-registro</label>
+				<input type="text" class="form-control" id="FolioAsignado" name="FolioAsignado"
+					placeholder="Introduce su Apellido Paterno">
+			</div>
+			<div class="form-group col-xl-5">
+				<label for="ejemplo_email_1">Acta de Nacimiento</label>
+				<input type="file" class="form-control" id="ActNacimiento" name="ActNacimiento"
+					placeholder="Introduce su Apellido Paterno">
+			</div>
+			<div class="form-group col-xl-5">
+				<label for="ejemplo_email_1">Certificado de secundaria</label>
+				<input type="file" class="form-control" id="CertificadoSec" name="CertificadoSec"
+					placeholder="Introduce su Apellido Paterno">
+			</div>
+			</div>
 
+</div>
   </div>
 
   <div id="tabs-3">
   <div class="container">
+  <div class="row">
   <div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Nombre</label>
 				<input type="text" class="form-control" id="Namep" name="Namep"
@@ -276,8 +306,13 @@
 				<label for="ejemplo_email_1">Celular</label>
 				<input type="number" class="form-control" id="CelM" name="CelM"
 					placeholder="Introduce Número Celular">
-			</div>	
 			</div>
+	
+			</div>
+			</div>
+			<div>
+<button type="submit" class="btn btn-success btn-md">Enviar Datos </button>
+</div>
 <!------------------------------------------------------------------------------------------------------------------------------------->			
   </div>
   </div>
