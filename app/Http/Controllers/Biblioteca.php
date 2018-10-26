@@ -79,9 +79,9 @@
 
                 $this->validate($request,[
                     'IdAutor'   => 'required|numeric',
-                    'Nombre'    =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-                    'APaterno'  =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-                    'AMaterno'  =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
+                    'Nombre'    =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                    'APaterno'  =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                    'AMaterno'  =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
                 ]);
 
                 $Aut=new autores;
@@ -116,7 +116,7 @@
 
                     $this->validate($request,[
                         'IdEditorial'   => 'required|numeric',
-                        'Editorial'    =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
+                        'Editorial'    =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
                     ]);
                     
                     $Edi=new editoriales;
@@ -132,7 +132,7 @@
                     $Categoria=$request->Categoria;
                     $this->validate($request,[
                         'IdCategoria'   => 'required|numeric',
-                        'Categoria'    =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
+                        'Categoria'    =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
                     ]);
                     $Cat=new categorias;
                     $Cat->IdCategoria=$request->IdCategoria;
@@ -152,10 +152,10 @@
                     
                     $this->validate($request,[
                         'IdLibro'   => 'required|numeric',
-                        'Titulo'    =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                        'Titulo'    =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
                         'IdAutor'   => 'required|numeric',
                         'IdEditorial'  => 'required|numeric',
-                        'Edicion'  =>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                        'Edicion'  =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
                         'AnoPublicacion'    => 'required|date',
                         'IdCategoria'   => 'required|numeric',
                         
