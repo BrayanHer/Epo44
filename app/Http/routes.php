@@ -1,11 +1,11 @@
 <?php
 
 Route::get('/', function () {
-    return view('home');
+    return view('Home');
 });
 
 //Route::get('/Registro','RutasView@V_Alumnos')->name('Registro');
-Route::get('/home','RutasView@index_Al')->name('home');
+Route::get('/Home','RutasView@index_Al')->name('Home');
 Route::get('/RegistroPadres','RutasView@V_Padres')->name('RegistroPadres');
 Route::get('/Complemento','RutasView@V_Complemento')->name('Complemento');
 Route::get('/Acerca','RutasView@V_Acerca')->name('Acerca');

@@ -10,7 +10,7 @@ class RutasView extends Controller
 {
     public function index_Al()
     {
-        return view('home');
+        return view('Home');
     }
     public function V_Alumnos()
     {
@@ -31,7 +31,7 @@ class RutasView extends Controller
         return view('Administrador');
     }
     public function V_Login(){
-        return view('Admin.login');
+        return view('Admin.Login');
     }
     public function V_ins(){
         return view('Admin.Prueba');

@@ -19,7 +19,7 @@ class Alumno extends Controller
 	 	 $Localidades = Localidades::orderBy('IdLoc', 'asc')
      	 						->get();
 				
-     	 return view ("admin.Prueba")
+     	 return view ("Admin.Prueba")
 				->with('Municipios', $Municipios)
 				->with('Localidades', $Localidades);
 
