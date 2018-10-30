@@ -74,12 +74,20 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti">
             <li>
-              <a href="{{route('AltasB')}}">Alta</a>
+              <a href="{{route('AltasB')}}">Prestamo de Libros</a>
             </li>
             <li>
-              <a href="#">Consulta</a>
+              <a href="#">Libros</a>
             </li>
             <li>
+              <a href="#">Autores</a>
+            </li>
+            <li>
+              <a href="#">Editoriales</a>
+            </li>
+            <li>
+              <a href="#">Categorias</a>
+            </li>
           </ul>
 <!-- fin de lista biblioteca -->
         </li>
