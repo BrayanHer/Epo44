@@ -18,11 +18,19 @@ Route::get('/Alumnos','Alumno@Alumnos')->name('Alumnos');
 Route::POST('/GAlumnos','Alumno@GAlumnos')->name('GAlumnos');
 
 //Biblioteca
+    //Autores
+Route::get('/AltasA','Autor@AltasA')->name('AltasA');
+Route::POST('/GAutor','Autor@GAutor')->name('GAutor');
+    //Editoriales
+Route::get('/AltasE','Editorial@AltasE')->name('AltasE');
+Route::POST('/GEditoriales','Editorial@GEditoriales')->name('GEditoriales');
+    //Categorias
+Route::get('/AltasC','Autor@AltasC')->name('AltasC');
+Route::POST('/GAutor','Autor@GAutor')->name('GAutor');
+    //Libros
+Route::get('/AltasL','Editorial@AltasL')->name('AltasL');
+Route::POST('/GEditoriales','Editorial@GEditoriales')->name('GEditoriales');
+    //Prestamo de Libros
+Route::get('/AltasP','Editorial@AltasP')->name('AltasP');
+Route::POST('/GEditoriales','Editorial@GEditoriales')->name('GEditoriales');
 
-Route::get('/AltasB','Biblioteca@AltasB')->name('AltasB');
-Route::POST('/GAutor','Biblioteca@GAutor')->name('GAutor');
-Route::POST('/GEditoriales','Biblioteca@GEditoriales')->name('GEditoriales');
-Route::POST('/Gcategorias','Biblioteca@Gcategorias')->name('Gcategorias');
-Route::POST('/Glibros','Biblioteca@Glibros')->name('Glibros');
-
-Route::get('/ReporteAutores','Biblioteca@ReporteAutores');
