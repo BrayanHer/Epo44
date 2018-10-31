@@ -25,11 +25,11 @@ Route::POST('/GAutor','Autor@GAutor')->name('GAutor');
 Route::get('/AltasE','Editorial@AltasE')->name('AltasE');
 Route::POST('/GEditoriales','Editorial@GEditoriales')->name('GEditoriales');
     //Categorias
-Route::get('/AltasC','Autor@AltasC')->name('AltasC');
-Route::POST('/GAutor','Autor@GAutor')->name('GAutor');
+Route::get('/AltasC','Categoria@AltasC')->name('AltasC');
+Route::POST('/Gcategorias','Categoria@Gcategorias')->name('Gcategorias');
     //Libros
-Route::get('/AltasL','Editorial@AltasL')->name('AltasL');
-Route::POST('/GEditoriales','Editorial@GEditoriales')->name('GEditoriales');
+Route::get('/AltasL','Libro@AltasL')->name('AltasL');
+Route::POST('/Glibros','Libro@Glibros')->name('Glibros');
     //Prestamo de Libros
 Route::get('/AltasP','Editorial@AltasP')->name('AltasP');
 Route::POST('/GEditoriales','Editorial@GEditoriales')->name('GEditoriales');

@@ -14,7 +14,7 @@
     class Autor extends Controller
     {
         public function AltasA(){
-            $clavequesigueA = autores::orderBy('IdAutor', 'desc')
+            $clavequesigueA = autores::withTrashed()->orderBy('IdAutor', 'desc')
                                         ->take(1)
                                         ->get();
                 if(count($clavequesigueA)==0){
@@ -24,7 +24,7 @@
                     $IdAutor = $clavequesigueA[0]->IdAutor + 1;
                 }
             
-            $Autores = autores::orderBy('IdAutor', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
+            $Autores = autores::withTrashed()->orderBy('IdAutor', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
                                         ->get();
                 return view ("Biblioteca.Autores")
                 ->with('IdAutor', $IdAutor)

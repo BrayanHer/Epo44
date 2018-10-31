@@ -10,7 +10,7 @@
     class Editorial extends Controller
     {
         public function AltasE(){
-            $clavequesigue = editoriales::orderBy('IdEditorial', 'desc')
+            $clavequesigue = editoriales::withTrashed()->orderBy('IdEditorial', 'desc')
                                             ->take(1)
                                             ->get();
             if(count($clavequesigue)==0){
@@ -20,7 +20,7 @@
                 $IdEditorial = $clavequesigue[0]->IdEditorial + 1;
             }
             
-            $Editoriales = editoriales::orderBy('IdEditorial', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
+            $Editoriales = editoriales::withTrashed()->orderBy('IdEditorial', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
                                             ->get();
             
             return view ("Biblioteca.Editoriales")
