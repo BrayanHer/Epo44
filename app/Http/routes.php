@@ -26,4 +26,4 @@ Route::POST('/GEditoriales','Biblioteca@GEditoriales')->name('GEditoriales');
 Route::POST('/Gcategorias','Biblioteca@Gcategorias')->name('Gcategorias');
 Route::POST('/Glibros','Biblioteca@Glibros')->name('Glibros');
 
-
+Route::get('/ReporteAutores','Biblioteca@ReporteAutores');

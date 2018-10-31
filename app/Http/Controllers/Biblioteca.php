@@ -173,4 +173,10 @@
                     return redirect()->back();
             }
 
+            public function ReporteAutores(){
+                $Autores = autores::withTrashed()->orderBy('Idm', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
+                                                         ->get();
+                 return view('Biblioteca.Altas')
+                        ->with('Autores', $Autores);
+               }
  }

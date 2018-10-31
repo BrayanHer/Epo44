@@ -1,4 +1,4 @@
-@extends('Home')
+@extends('home')
 @section('homecontent')
 
 <!DOCTYPE html>
@@ -51,9 +51,9 @@
 						<div class="col-md-6">
 <p align="justify">La Escuela Preparatoria Oficial Núm.44 inicia sus labores en el año 1989, con 67 alumnos, 
 el trabajo de esta escuela del nivel medio superior se inicia en un edificio de apenas 3 aulas, 
-un espacio para el servicio  de orientación y el área administrativa, alumnos en ese entonces 
+un espacio para el servicio de orientación y el área administrativa, alumnos en ese entonces 
 provenientes de las comunidades aledañas a esta cabecera municipal bajo la dirección del profesor
- Manuel Rangel Domínguez, posteriormente en 1991 continua su marcha guiada por el Profesor Primitivo 
+ Manuel Rangel Domínguez, posteriormente en 1991 continúa su marcha guiada por el Profesor Primitivo 
  Hinojosa y es en el ciclo escolar 1992-1993, periodo en el que el Profesor Roberto Ruíz Estrada 
  dirige el camino de 116 alumnos, motivado por el interés de consolidar un plantel de calidad, 
  ha logrado elevar a más de 994 alumnos. Ahora en un edificio escolar de 20 aulas escolares. 1 área
@@ -101,7 +101,7 @@ superior desde facultades universitarias, tecnológicos, escuelas normales, escu
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 pl-lg-0 offset-lg-5 cta-content">
-					<h1>Mision -Vision -Valores</h1>
+					<h1>Misión - Visión - Valores</h1>
 					<div class="testimonials-slider" id="test-slider">
 						<div class="ts-item">
 							<h4>Misión</h4>

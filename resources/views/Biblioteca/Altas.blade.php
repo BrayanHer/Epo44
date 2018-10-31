@@ -305,6 +305,84 @@ hr{
 		</tr>
 		</Thead>
 	</table>
+	<br><br>
+	<h1> Consultas </h1>
+Autores
+<br>
+	<table border="1" bordercolor="blue">
+	 <tr> <td> Clave </td> <td> Nombre </td> <td> Apellido Paterno </td> <td> Apellido Materno </td> <td> Acciones </td> </tr>
+		@foreach($Autores as $au)
+
+	 <tr> 
+	  <td> {{$au->IdAutor}} </td>
+	  <td> {{$au->Nombre}} </td>
+	  <td> {{$au->APaterno}} </td>
+	  <td> {{$au->AMaterno}} </td>
+
+	  		@if($au->deletw_at == "")
+	  <td>  <a href="#" >
+            Inhabilitar 
+        	</a>
+            
+            <a href="#" >
+		   | Modificar
+		   	</a>
+			
+				@else
+			<a href="#" >
+			Restaurar
+			</a>
+
+			<a href="#" >
+			Eliminar
+			</a>
+
+			@endif
+        </td>
+	 </tr>
+		@endforeach
+	</table>
+
+Editoriales
+<br>
+	<table border="1" bordercolor="blue">
+	 <tr> <td> Clave </td> <td> Nombre </td> <td> Apellido Paterno </td> <td> Apellido Materno </td> <td> Acciones </td> </tr>
+		@foreach($Autores as $au)
+
+	 <tr> 
+	  <td> {{$au->IdAutor}} </td>
+	  <td> {{$au->Nombre}} </td>
+	  <td> {{$au->APaterno}} </td>
+	  <td> {{$au->AMaterno}} </td>
+
+	  		@if($au->deletw_at == "")
+	  <td>  <a href="#" >
+            Inhabilitar 
+        	</a>
+            
+            <a href="#" >
+		   | Modificar
+		   	</a>
+			
+				@else
+			<a href="#" >
+			Restaurar
+			</a>
+
+			<a href="#" >
+			Eliminar
+			</a>
+
+			@endif
+        </td>
+	 </tr>
+		@endforeach
+	</table>
+
+
+
+
+
 </body>
 </html>
 @endsection
