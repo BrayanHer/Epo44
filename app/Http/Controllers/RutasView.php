@@ -36,5 +36,8 @@ class RutasView extends Controller
     public function V_ins(){
         return view('Admin.Prueba');
     }
+    public function Vps(){
+        return view('Admin.VistaP');
+    }
 
 }
