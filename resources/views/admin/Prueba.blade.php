@@ -50,11 +50,12 @@
 				<input type="number" class="form-control" id="IdMatricula" name="IdMatricula"
 					placeholder="Introduce tu Matrícula" min="1">
 			 </div>
+			 </div>
 @if($errors->first('Nombre')) 
 <i> {{ $errors->first('Nombre') }} </i> 
 @endif
 
-			</div>
+			
 
 			<div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Nombre</label>
