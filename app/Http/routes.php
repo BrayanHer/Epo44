@@ -31,6 +31,6 @@ Route::POST('/Gcategorias','Categoria@Gcategorias')->name('Gcategorias');
 Route::get('/AltasL','Libro@AltasL')->name('AltasL');
 Route::POST('/Glibros','Libro@Glibros')->name('Glibros');
     //Prestamo de Libros
-Route::get('/AltasP','Editorial@AltasP')->name('AltasP');
-Route::POST('/GEditoriales','Editorial@GEditoriales')->name('GEditoriales');
+Route::get('/AltasP','PrestamoLibro@AltasP')->name('AltasP');
+Route::POST('/GPrestamo','PrestamoLibro@GPrestamo')->name('GPrestamo');
 
