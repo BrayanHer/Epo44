@@ -8,15 +8,17 @@
 }
 </style>
 
-<div class="container">
-	<div class="row">
+
         <form action="{{route('Glibros')}}" method="POST" enctype='multipart/form-data'>                        
     		{{csrf_field()}}
-				<div class="alert alert-primary col-md-12" role="alert">
+			<div class="container">
+	<div class="row">
+				<div class="alert alert-primary col-md-12" role="alert" align="center">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#IdLibros">
 						<i class="fa fa-fw fa-plus"></i>
 					</button> &nbsp; Agregar nuevo "Libro"
 				</div>
+
 				<!-- Modal -->
     		    <div class="modal fade" id="IdLibros" tabindex="-1" role="dialog" aria-labelledby="IdLibrosLabel" aria-hidden="true">
 		      <div class="modal-dialog" role="document">
@@ -75,7 +77,7 @@
 						<div class="form-group col-xl-12">
 							<label for="ejemplo_email_1"> Año Publicación </label>
 							<input type="Date" class="form-control" id="AnoPublicacion" name="AnoPublicacion" value="{{old('AnoPublicacion')}}" 
-	2w													placeholder="Introduce el Año Publicación">
+							placeholder="Introduce el Año Publicación">
 						</div>
 
 						Seleccione categoria: 
@@ -95,7 +97,7 @@
 	  		  </div>
 			</div>   
   		</form>
-		
+		<!-- Aqui termina el modal -->
 		<div class="col-md-12">
             <div class="hidden-lg"></div>
             <h3 class="page-header">
@@ -103,8 +105,9 @@
             </h3>
 			<hr color="black" size=1>
         </div>
-        <div class="col-md-10"> 
+        <div class="col-md-12"> 
 			<table class="table">
+			@foreach($Libros as $li)
 				<thead class="thead-dark col-md-10">
 					<tr>
 						<th scope="col-md-10">Clave</th>
@@ -114,9 +117,15 @@
 						<th scope="col-md-10">Edición</th>
 						<th scope="col-md-10">Año de Publicación</th>
 						<th scope="col-md-10">Categoria</th>
+						@if($li->deletw_at == "")
+						<th scope="col-md-10">Modificar</th>
+						<th scope="col-md-10">Desactivar</th>
+						@else
+						<th scope="col-md-10">Restaurar</th>
+						<th scope="col-md-10">Eliminar</th>
+						@endif
 					</tr>
 				</thead>
-			@foreach($Libros as $li)
 				<tbody class="col-md-10">
     				<tr>
 						<th scope="row">{{$li->IdLibro}}</th>
@@ -128,12 +137,20 @@
                         <td>{{$li->IdCategoria}}</td>
                         
                         @if($li->deletw_at == "")
-						<td>  <a href="#" > Inhabilitar </a>
-		  					  <a href="#" > | Modificar </a>
+	<td>
+	<button type="submit" class="btn btn-warning"><i class="fa fa-fw fa-pencil-square-o"></i></button>
+	</td>
+    <td>
+	<button type="submit" class="btn btn-danger"><i class="fa fa-fw fa-toggle-off"></i></button>
+	</td>
 								
 						@else
-				 			  <a href="#" > Restaurar   </a>
-							  <a href="#" > Eliminar	</a>
+						<td>
+	<button type="submit" class="btn btn-success"><i class="fa fa-fw fa-reply"></i></button>
+	</td>
+    <td>
+	<button type="submit" class="btn btn-danger"><i class="fa fa-fw fa-trash"></i></button>
+	</td>
 						@endif
 						</td>
 					</tr>
