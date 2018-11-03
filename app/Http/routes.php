@@ -12,6 +12,7 @@ Route::get('/Acerca','RutasView@V_Acerca')->name('Acerca');
 Route::get('/Login','RutasView@V_Login')->name('Login');
 Route::get('/Administrador','RutasView@V_Admin')->name('Administrador');
 Route::get('/Vps','RutasView@Vps')->name('Vps');
+Route::get('/Ubicacion','RutasView@V_Ubicacion')->name('Ubicacion');
 
 //--method---Alias de la vista--/controlador----funcion----name+alias de la visa
 Route::get('/Alumnos','Alumno@Alumnos')->name('Alumnos');

@@ -36,4 +36,7 @@
         public function Vps(){
             return view('Admin.VistaP');
         }
+        public function V_Ubicacion(){
+            return view('ContenidoWeb.Ubicacion');
+        }
     }

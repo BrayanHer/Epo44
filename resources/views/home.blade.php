@@ -57,8 +57,8 @@
           <li><a href="">Servicios y Tramites</a></li><!--poner la vista respectiva con el codigo "('aqui va el nombre de la ruta')"-->
           <li><a href="{{route('Acerca')}}">Acerca de la EPO No.44</a></li>
           <li><a href="">Vinculación</a></li>
-          <li><a href="{{route('Alumnos')}}">Estudiantes</a></li>
-          <li><a href="">Ubicación</a></li>
+          
+          <li><a href="{{route('Ubicacion')}}">Ubicación</a></li>
           <li><a href="{{route('Login')}}">Iniciar Sesión</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
