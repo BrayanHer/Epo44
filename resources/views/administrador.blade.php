@@ -31,14 +31,14 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         
 <!-- Lista de maestros -->
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Maestros">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+          <i class="fa fa-users"></i>
             <span class="nav-link-text">Maestros</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="{{route('Alumnos')}}">Estudiantes</a>
+              <a href="#">Estudiantes</a>
             </li>
             <li>
               <a href="cards.html">Tareas</a>
@@ -48,9 +48,9 @@
 <!-- fin de lista de maestros -->
 
 <!-- inicio de lista de Alumnos -->
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Alumnos">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file"></i>
+          <i class="fa fa-graduation-cap"></i>
             <span class="nav-link-text">Alumnos</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
@@ -58,7 +58,7 @@
               <a href="login.html">Tareas</a>
             </li>
             <li>
-              <a href="register.html">Información</a>
+              <a href="{{route('Alumnos')}}">Información Personal</a>
             </li>
             <li>
               <a href="forgot-password.html">Foros</a>
@@ -67,9 +67,9 @@
         </li>
 <!-- fin de lista de alumnos -->
 <!-- inicio de lista biblioteca -->
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Biblioteca">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-sitemap"></i>
+          <i class="fa fa-book"></i>
             <span class="nav-link-text">Biblioteca</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti">
@@ -91,9 +91,9 @@
           </ul>
 <!-- fin de lista biblioteca -->
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrador">
           <a class="nav-link" href="#">
-            <i class="fa fa-fw fa-link"></i>
+          <i class="fa fa-sliders"></i>
             <span class="nav-link-text">Administrador</span>
           </a>
         </li>

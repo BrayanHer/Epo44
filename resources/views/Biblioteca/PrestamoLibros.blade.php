@@ -8,11 +8,12 @@
 }
 </style>
 
-<div class="container">
-	<div class="row">
+
         <form action="{{route('GPrestamo')}}" method="POST" enctype='multipart/form-data'>                        
     		{{csrf_field()}}
-				<div class="alert alert-primary col-md-12" role="alert">
+			<div class="container">
+	<div class="row">
+				<div class="alert alert-primary col-md-12" role="alert" align="center">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#IdPrestamos">
 						<i class="fa fa-fw fa-plus"></i>
 					</button> &nbsp; Nuevo "Prestamo de Libro"
@@ -94,18 +95,20 @@
         </div>
         <div class="col-md-10"> 
 			<table class="table">
-				<thead class="thead-dark col-md-10">
+			<thead align="center" class="thead-dark col-md-10">
 					<tr>
 						<th scope="col-md-10">Clave</th>
 						<th scope="col-md-10">Matrícula</th>
                         <th scope="col-md-10">Libro</th>
 						<th scope="col-md-10">Fecha de Prestamo</th>
 						<th scope="col-md-10">Fecha de Entrega</th>
+						<th colspan="2" scope="col-md-10"><i class="fa fa-angle-down"></i> &nbsp;Opciones</th>
+
 					</tr>
 				</thead>
 			@foreach($Prestamo as $pr)
 				<tbody class="col-md-10">
-    				<tr>
+				<tr align="center">
 						<th scope="row">{{$pr->IdPrestamo}}</th>
                         <td>{{$pr->IdMatricula}}</td>
                         <td>{{$pr->IdLibro}}</td>
@@ -113,12 +116,28 @@
                         <td>{{$pr->FechaEntrega}}</td>
                         
                         @if($pr->deletw_at == "")
-						<td>  <a href="#" > Inhabilitar </a>
-		  					  <a href="#" > | Modificar </a>
+						<td>
+						<button type="submit" class="btn btn-warning">
+						<i class="fa fa-fw fa-pencil-square-o"></i
+						>Modificar</button>
+						</td>
+						<td>
+						<button type="submit" class="btn btn-danger">
+						<i class="fa fa-fw fa-toggle-off"></i>
+						Desactivar</button>
+						</td>
 								
 						@else
-				 			  <a href="#" > Restaurar   </a>
-							  <a href="#" > Eliminar	</a>
+						<td>
+						<button type="submit" class="btn btn-success">
+						<i class="fa fa-fw fa-reply"></i> 
+						&nbsp;Activar&nbsp;&nbsp;</button>
+						</td>
+						<td>
+						<button type="submit" class="btn btn-danger">
+						<i class="fa fa-fw fa-trash"></i> 
+						&nbsp;&nbsp;Eliminar&nbsp;</button>
+						</td>
 						@endif
 						</td>
 					</tr>

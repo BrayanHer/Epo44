@@ -107,27 +107,23 @@
         </div>
         <div class="col-md-12"> 
 			<table class="table">
-			@foreach($Libros as $li)
-				<thead class="thead-dark col-md-10">
+		
+				<thead align="center" class="thead-dark col-md-10">
 					<tr>
 						<th scope="col-md-10">Clave</th>
-						<th scope="col-md-10">Titulo</th>
+			 			<th scope="col-md-10">Titulo</th>
                         <th scope="col-md-10">Autor</th>
 						<th scope="col-md-10">Editorial</th>
 						<th scope="col-md-10">Edición</th>
 						<th scope="col-md-10">Año de Publicación</th>
-						<th scope="col-md-10">Categoria</th>
-						@if($li->deletw_at == "")
-						<th scope="col-md-10">Modificar</th>
-						<th scope="col-md-10">Desactivar</th>
-						@else
-						<th scope="col-md-10">Restaurar</th>
-						<th scope="col-md-10">Eliminar</th>
-						@endif
+						<th scope="col-md-10">Categoria</th>			
+						<th colspan="2" scope="col-md-10"><i class="fa fa-angle-down"></i> &nbsp;Opciones</th>
 					</tr>
 				</thead>
 				<tbody class="col-md-10">
-    				<tr>
+			@foreach($Libros as $li)
+    				<tr align="center">
+					
 						<th scope="row">{{$li->IdLibro}}</th>
 						<td>{{$li->Titulo}}</td>
                         <td>{{$li->IdAutor}}</td>
@@ -135,23 +131,32 @@
                         <td>{{$li->Edicion}}</td>
                         <td>{{$li->AnoPublicacion}}</td>
                         <td>{{$li->IdCategoria}}</td>
-                        
-                        @if($li->deletw_at == "")
-	<td>
-	<button type="submit" class="btn btn-warning"><i class="fa fa-fw fa-pencil-square-o"></i></button>
-	</td>
-    <td>
-	<button type="submit" class="btn btn-danger"><i class="fa fa-fw fa-toggle-off"></i></button>
-	</td>
-								
-						@else
+						
+
+                    @if($li->delete_at == "")
 						<td>
-	<button type="submit" class="btn btn-success"><i class="fa fa-fw fa-reply"></i></button>
-	</td>
-    <td>
-	<button type="submit" class="btn btn-danger"><i class="fa fa-fw fa-trash"></i></button>
-	</td>
-						@endif
+						<button type="submit" class="btn btn-warning">
+						<i class="fa fa-fw fa-pencil-square-o"></i
+						>Modificar</button>
+						</td>
+						<td>
+						<button type="submit" class="btn btn-danger">
+						<i class="fa fa-fw fa-toggle-off"></i>
+						Desactivar</button>
+						</td>
+								
+					@else
+						<td>
+						<button type="submit" class="btn btn-success">
+						<i class="fa fa-fw fa-reply"></i> 
+						&nbsp;Activar&nbsp;&nbsp;</button>
+						</td>
+						<td>
+						<button type="submit" class="btn btn-danger">
+						<i class="fa fa-fw fa-trash"></i> 
+						&nbsp;&nbsp;Eliminar&nbsp;</button>
+						</td>
+					@endif
 						</td>
 					</tr>
 			@endforeach
