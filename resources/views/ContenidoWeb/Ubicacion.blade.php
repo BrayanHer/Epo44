@@ -24,7 +24,6 @@
 			============================================= -->
 			<link rel="stylesheet" href="ub/css/linearicons.css">
 			<link rel="stylesheet" href="ub/css/font-awesome.min.css">
-		
 			<link rel="stylesheet" href="ub/css/magnific-popup.css">
 			<link rel="stylesheet" href="ub/css/nice-select.css">							
 			<link rel="stylesheet" href="ub/css/animate.min.css">
@@ -46,50 +45,56 @@
 						<div class="col-lg-4 d-flex flex-column address-wrap">
 							<div class="single-contact-address d-flex flex-row">
 								<div class="icon">
-									<span class="lnr lnr-home"></span>
+									<span class="lnr lnr-map-marker"></span>
 								</div>
 								<div class="contact-details">
-									<h5>Binghamton, New York</h5>
+									<h5>Venustiano Carranza s/n, Centro, 50850 Temoaya, Méx.</h5>
 									<p>
-										4343 Hinkle Deegan Lake Road
+										Dirección
 									</p>
 								</div>
 							</div>
 							<div class="single-contact-address d-flex flex-row">
 								<div class="icon">
-									<span class="lnr lnr-phone-handset"></span>
+								<span class="lnr lnr-user"></span>
 								</div>
 								<div class="contact-details">
-									<h5>00 (958) 9865 562</h5>
-									<p>Mon to Fri 9am to 6 pm</p>
+									<h5> nombre Director</h5>
+									<p>Director</p>
 								</div>
 							</div>
 							<div class="single-contact-address d-flex flex-row">
 								<div class="icon">
-									<span class="lnr lnr-envelope"></span>
+								<span class="lnr lnr-user"></span>
 								</div>
 								<div class="contact-details">
-									<h5>support@colorlib.com</h5>
-									<p>Send us your query anytime!</p>
+									<h5>Nombre directora</h5>
+									<p>Sub-Directora</p>
 								</div>
 							</div>														
 						</div>
 						<div class="col-lg-8">
 							<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
 								<div class="row">	
-									<div class="col-lg-6 form-group">
-										<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
 									
-										<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
-
-										<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required="" type="text">
-									</div>
 									<div class="col-lg-6 form-group">
-										<textarea class="common-textarea form-control" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required=""></textarea>				
+										
+										<h5 align="center">Mandanos un Mensaje</h5><br>
+										<input name="name" placeholder="Introduce tu nombre" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Introduce tu nombre'" class="common-input mb-20 form-control" required="" type="text">
+									
+										<input name="email" placeholder="Introduce tu Correo" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Introduce tu correo'" class="common-input mb-20 form-control" required="" type="email">
+
+										<input name="subject" placeholder="Preparatoria_oficial@EPO44.org " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Preparatoria_oficial@EPO44.org '" class="common-input mb-20 form-control" required="" type="text">
 									</div>
+									
+									<div class="col-lg-6 form-group">
+										<br><br>
+										<textarea class="common-textarea form-control" name="message" placeholder="Escribe tu Mensaje" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escribe tu Mensaje'" required=""></textarea>				
+									</div>
+									
 									<div class="col-lg-12">
 										<div class="alert-msg" style="text-align: left;"></div>
-										<button class="genric-btn primary circle" style="float: right;">Send Message</button>											
+										<button class="genric-btn primary circle" style="float: right;">Enviar</button>											
 									</div>
 								</div>
 							</form>	
