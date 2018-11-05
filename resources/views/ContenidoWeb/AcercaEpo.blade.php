@@ -86,7 +86,7 @@ superior desde facultades universitarias, tecnológicos, escuelas normales, escu
 				</div>
 				<div class="col-lg-4 pt-4">
 
-					<img src="img/about.jpg" alt="">
+					<img src="img/Logo.jpg" alt="">
 
 				</div>
 			</div>
@@ -105,7 +105,7 @@ superior desde facultades universitarias, tecnológicos, escuelas normales, escu
 					<div class="testimonials-slider" id="test-slider">
 						<div class="ts-item">
 							<h4>Misión</h4>
-							<p>Somos una institución educativa que forma personas integras, en el desarrollo de habilidades, 
+							<p align="justify">Somos una institución educativa que forma personas integras, en el desarrollo de habilidades, 
 								conocimientos  y actitudes acorde a los desempeños terminales expresados por el Sistema 
 								Nacional de Bachilleratos, en el marco de la universidad, con un enfoque humanista, 
 								basado en convivencia escolar armónica y cultura de paz para el desarrollo sano e
@@ -114,7 +114,7 @@ superior desde facultades universitarias, tecnológicos, escuelas normales, escu
 						</div>
 						<div class="ts-item">
 							<h4>Visión</h4>
-							<p>En la Escuela Preparatoria Oficial No. 44, se consolidará como la Institución de Educación
+							<p align="justify">En la Escuela Preparatoria Oficial No. 44, se consolidará como la Institución de Educación
 							 Media Superior de Bachillerato General del GEM, con mas reconocimiento en el municipio de Temoaya
 							y a la comunidad que la constituye convivirá en un marco de armonía, compromiso y respeto a los 
 							derechos de sus integrantes en un espacio adecuado desarrollo escolar</p>

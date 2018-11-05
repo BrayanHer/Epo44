@@ -23,6 +23,7 @@ class Libros extends Migration
 
                 $table->integer('IdCategoria')->unsigned();
                 $table->foreign('IdCategoria')->references('IdCategoria')->on('categorias');
+                $table->string('Imagen', 50);
                 
                 $table->rememberToken();
                 $table->timestamps();
