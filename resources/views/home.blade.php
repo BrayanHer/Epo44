@@ -20,6 +20,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style1.css" rel="stylesheet">
 </head>
+
 <body id="body">
   <!--==========================
     Top Bar
@@ -27,13 +28,14 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container clearfix">
       <div class="contact-info float-left">
-        <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com"> Preparatoria_oficial@EPO44.org </a>
-        <i class="fa fa-phone"></i> Teléfono
+        <i class="fa fa-envelope-o"> </i> 
+        <a href="mailto:contact@example.com"> Preparatoria_oficial@EPO44.org </a>
+        <i class="fa fa-phone"> </i> Teléfono
       </div>
       <div class="social-links float-right">
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="google-plus"><i class="fa fa-envelope"></i></a>
+        <a href="#" class="twitter"> <i class="fa fa-twitter"> </i> </a>
+        <a href="#" class="facebook"> <i class="fa fa-facebook"> </i> </a>
+        <a href="#" class="google-plus"> <i class="fa fa-envelope"> </i> </a>
       </div>
     </div>
   </section>
@@ -41,29 +43,24 @@
    Encabezado
   ============================-->
 
-
-  
   <header id="header">
     <div class="container">
-
       <div id="logo" class="pull-left">
-        <h1><a href="{{route('home')}}" class="scrollto">Epo<span>&nbsp; No.44</span></a></h1>
-
+        <h1> <a href="{{route('home')}}" class="scrollto"> Epo <span> &nbsp; No.44 </span> </a> </h1>
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="{{route('home')}}">Inicio</a></li>
-          <li><a href="">Servicios y Tramites</a></li><!--poner la vista respectiva con el codigo "('aqui va el nombre de la ruta')"-->
-          <li><a href="{{route('Acerca')}}">Acerca de la EPO No.44</a></li>
-          <li><a href="">Vinculación</a></li>
-          <li><a href="{{route('Ubicacion')}}">Ubicación</a></li>
-          <li><a href="{{route('Login')}}">Iniciar Sesión</a></li>
+          <li class="menu-active"> <a href="{{route('home')}}"> Inicio </a> </li>
+          <li> <a href=""> Servicios y Tramites </a> </li><!--poner la vista respectiva con el codigo "('aqui va el nombre de la ruta')"-->
+          <li> <a href="{{route('Acerca')}}"> Acerca de la EPO No.44 </a> </li>
+          <li> <a href=""> Vinculación </a> </li>
+          <li> <a href="{{route('Ubicacion')}}"> Ubicación </a> </li>
+          <li> <a href="{{route('Login')}}"> Iniciar Sesión </a> </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header>
-
 
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -88,6 +85,5 @@
         @yield('homecontent')
 
         <!-- /.container-fluid -->
-
-    </div>  
+</div>  
 </html>

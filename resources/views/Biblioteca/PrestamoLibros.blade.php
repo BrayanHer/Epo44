@@ -8,11 +8,10 @@
 }
 </style>
 
-
-        <form action="{{route('GPrestamo')}}" method="POST" enctype='multipart/form-data'>                        
-    		{{csrf_field()}}
-			<div class="container">
-	<div class="row">
+    <form action="{{route('GPrestamo')}}" method="POST" enctype='multipart/form-data'>                        
+   		{{csrf_field()}}
+		<div class="container">
+			<div class="row">
 				<div class="alert alert-primary col-md-12" role="alert" align="center">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#IdPrestamos">
 						<i class="fa fa-fw fa-plus"></i>
@@ -20,71 +19,72 @@
 				</div>
 				<!-- Modal -->
     		    <div class="modal fade" id="IdPrestamos" tabindex="-1" role="dialog" aria-labelledby="IdPrestamosLabel" aria-hidden="true">
-		      <div class="modal-dialog" role="document">
-		        <div class="modal-content">
-		          <div class="modal-header">
-		            <h5 class="modal-title" id="IdPrestamosLabel"> Prestamo Libro </h5>
-		            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		              <span aria-hidden="true">&times;</span>
-		            </button>
-		          </div>
+		      		<div class="modal-dialog" role="document">
+		        		<div class="modal-content">
+		          			<div class="modal-header">
+		            			<h5 class="modal-title" id="IdPrestamosLabel"> Prestamo Libro </h5>
+		            			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		              				<span aria-hidden="true">&times;</span>
+		            			</button>
+		          			</div>
 
-				  <div class="modal-body">
-				    @if($errors->first('IdPrestamo')) 
-				     <i> {{$errors->first('IdPrestamo')}} </i> 
-		    		@endif
-		    		<div class="form-group col-xl-2">
-							<label for="ejemplo_email_1"> Clave </label>
-							<input type="text" class="form-control" id="IdPrestamo" name="IdPrestamo" value="{{$IdPrestamo}}" readonly='readonly'>
-						</div>
+				  			<div class="modal-body">
+							    @if($errors->first('IdPrestamo')) 
+							    	<i> {{$errors->first('IdPrestamo')}} </i> 
+					    		@endif
+		    					<div class="form-group col-xl-2">
+									<label for="ejemplo_email_1"> Clave </label>
+									<input type="text" class="form-control" id="IdPrestamo" name="IdPrestamo" value="{{$IdPrestamo}}" readonly='readonly'>
+								</div>
 		        
-						@if($errors->first('IdMatricula')) 
-						<i> {{$errors->first('IdMatricula')}} </i> 
-						@endif	
-						<div class="form-group col-xl-12">
-							<label for="ejemplo_email_1"> Matrícula </label>
-							<input type="text" class="form-control" id="IdMatricula" name="IdMatricula" value="{{old('IdMatricula')}}" 
-														placeholder="Introduce la Matrícula">
-						</div>
+								@if($errors->first('IdMatricula')) 
+									<i> {{$errors->first('IdMatricula')}} </i> 
+								@endif	
+								<div class="form-group col-xl-12">
+									<label for="ejemplo_email_1"> Matrícula </label>
+									<input type="text" class="form-control" id="IdMatricula" name="IdMatricula" value="{{old('IdMatricula')}}" 
+										placeholder="Introduce la Matrícula">
+								</div>
 
-						@if($errors->first('IdLibro')) 
-						<i> {{$errors->first('IdLibro')}} </i> 
-						@endif	
-						<div class="form-group col-xl-12">
-							<label for="ejemplo_email_1"> Libro </label>
-							<input type="text" class="form-control" id="IdLibro" name="IdLibro" value="{{old('IdLibro')}}" 
-														placeholder="Introduce el Libro">
-						</div>
+								@if($errors->first('IdLibro')) 
+									<i> {{$errors->first('IdLibro')}} </i> 
+								@endif	
+								<div class="form-group col-xl-12">
+									<label for="ejemplo_email_1"> Libro </label>
+									<input type="text" class="form-control" id="IdLibro" name="IdLibro" value="{{old('IdLibro')}}" 
+										placeholder="Introduce el Libro">
+								</div>
 
-						@if($errors->first('FechaPrestamo')) 
-						<i> {{$errors->first('FechaPrestamo')}} </i> 
-						@endif	
-						<div class="form-group col-xl-12">
-							<label for="ejemplo_email_1"> Fecha de Prestamo </label>
-							<input type="Date" class="form-control" id="FechaPrestamo" name="FechaPrestamo" value="{{old('FechaPrestamo')}}" 
-														placeholder="Introduce la Fecha de Prestamo">
-						</div>
+								@if($errors->first('FechaPrestamo')) 
+									<i> {{$errors->first('FechaPrestamo')}} </i> 
+								@endif	
+								<div class="form-group col-xl-12">
+									<label for="ejemplo_email_1"> Fecha de Prestamo </label>
+									<input type="Date" class="form-control" id="FechaPrestamo" name="FechaPrestamo" value="{{old('FechaPrestamo')}}" 
+										placeholder="Introduce la Fecha de Prestamo">
+								</div>
 
-						@if($errors->first('FechaEntrega')) 
-						<i> {{$errors->first('FechaEntrega')}} </i> 
-						@endif	
-						<div class="form-group col-xl-12">
-							<label for="ejemplo_email_1"> Fecha de Entrega </label>
-							<input type="Date" class="form-control" id="FechaEntrega" name="FechaEntrega" value="{{old('FechaEntrega')}}" 
-														placeholder="Introduce la Fecha de Entrega">
-						</div>
-						
-		 		  </div>
+								@if($errors->first('FechaEntrega')) 
+									<i> {{$errors->first('FechaEntrega')}} </i> 
+								@endif	
+								<div class="form-group col-xl-12">
+									<label for="ejemplo_email_1"> Fecha de Entrega </label>
+									<input type="Date" class="form-control" id="FechaEntrega" name="FechaEntrega" value="{{old('FechaEntrega')}}" 
+										placeholder="Introduce la Fecha de Entrega">
+								</div>
+		 		  			</div>
       
-				  <div class="modal-footer">
-					<button type="submit" class="btn btn-success btn-md">
-						<span  aria-hidden="true"></span> Enviar
-					</button>
-				  </div>
+							 <div class="modal-footer">
+								<button type="submit" class="btn btn-success btn-md">
+									<span  aria-hidden="true"></span> Enviar
+								</button>
+							</div>
+						</div>
+	  		  		</div>
 				</div>
-	  		  </div>
-			</div>   
-  		</form>
+			</div>
+		</div>   
+  	</form>
 		
 		<div class="col-md-12">
             <div class="hidden-lg"></div>
@@ -95,7 +95,7 @@
         </div>
         <div class="col-md-12"> 
 			<table class="table">
-			<thead align="center" class="thead-dark col-md-12">
+				<thead align="center" class="thead-dark col-md-12">
 					<tr>
 						<th scope="col-md-10">Clave</th>
 						<th scope="col-md-10">Matrícula</th>
@@ -103,12 +103,11 @@
 						<th scope="col-md-10">Fecha de Prestamo</th>
 						<th scope="col-md-10">Fecha de Entrega</th>
 						<th colspan="2" scope="col-md-10"><i class="fa fa-angle-down"></i> &nbsp;Opciones</th>
-
 					</tr>
 				</thead>
-			@foreach($Prestamo as $pr)
+				@foreach($Prestamo as $pr)
 				<tbody class="col-md-12">
-				<tr align="center">
+					<tr align="center">
 						<th scope="row">{{$pr->IdPrestamo}}</th>
                         <td>{{$pr->Alumno}}</td>
                         <td>{{$pr->Titulo}}</td>
@@ -117,35 +116,34 @@
                         
                         @if($pr->delete_at == "")
 						<td>
-						<button type="submit" class="btn btn-warning">
-						<i class="fa fa-fw fa-pencil-square-o"></i
-						>Modificar</button>
+							<button type="submit" class="btn btn-warning">
+								<i class="fa fa-fw fa-pencil-square-o"></i>
+									Modificar
+							</button>
 						</td>
 						<td>
-						<button type="submit" class="btn btn-danger">
-						<i class="fa fa-fw fa-toggle-off"></i>
-						Desactivar</button>
-						</td>
-								
+							<button type="submit" class="btn btn-danger">
+								<i class="fa fa-fw fa-toggle-off"></i>
+									Desactivar
+							</button>
+						</td>	
 						@else
 						<td>
-						<button type="submit" class="btn btn-success">
-						<i class="fa fa-fw fa-reply"></i> 
-						&nbsp;Activar&nbsp;&nbsp;</button>
+							<button type="submit" class="btn btn-success">
+								<i class="fa fa-fw fa-reply"></i> 
+									&nbsp;Activar&nbsp;&nbsp;
+							</button>
 						</td>
 						<td>
-						<button type="submit" class="btn btn-danger">
-						<i class="fa fa-fw fa-trash"></i> 
-						&nbsp;&nbsp;Eliminar&nbsp;</button>
+							<button type="submit" class="btn btn-danger">
+								<i class="fa fa-fw fa-trash"></i> 
+									&nbsp;&nbsp;Eliminar&nbsp;
+							</button>
 						</td>
 						@endif
-						</td>
 					</tr>
-			@endforeach
+				@endforeach
   				</tbody>
 	        </table>
         </div>
-	</div>
-</div>
-
 @stop
