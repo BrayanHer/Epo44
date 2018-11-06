@@ -48,14 +48,14 @@
 														placeholder="Introduce el Título">
 						</div>
 
-						Seleccione autor: 
+						Seleccione autor:  <br>
 							<select name='IdAutor'>
 								@foreach($Autores as $au)
 									<option value='{{$au->IdAutor}}'>{{$au->Nombre}} </option>
 								@endforeach
 							</select>
 							<br>	<br>
-						Seleccione Editorial: 
+						Seleccione Editorial:  <br>
 							<select name='IdEditorial'>
          				@foreach($Editoriales as $ed)
           				<option value='{{$ed->IdEditorial}}'>{{$ed->Editorial}} </option>
@@ -80,7 +80,7 @@
 							placeholder="Introduce el Año Publicación">
 						</div>
 
-						Seleccione categoria: 
+						Seleccione categoria: <br>
 							<select name='IdCategoria'>
          				@foreach($Categorias as $ca)
           				<option value='{{$ca->IdCategoria}}'>{{$ca->Categoria}} </option>
@@ -126,13 +126,12 @@
 					
 						<th scope="row">{{$li->IdLibro}}</th>
 						<td>{{$li->Titulo}}</td>
-                        <td>{{$li->IdAutor}}</td>
-                        <td>{{$li->IdEditorial}}</td>
+                        <td>{{$li->Autor}}</td>
+                        <td>{{$li->Editorial}}</td>
                         <td>{{$li->Edicion}}</td>
                         <td>{{$li->AnoPublicacion}}</td>
-                        <td>{{$li->IdCategoria}}</td>
+                        <td>{{$li->Categoria}}</td>
 						
-
                     @if($li->delete_at == "")
 						<td>
 						<button type="submit" class="btn btn-warning">

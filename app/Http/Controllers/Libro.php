@@ -9,7 +9,7 @@
  use App\autores;
  use App\editoriales;
  use App\categorias;
-
+ 
     class Libro extends Controller
     {
         public function AltasL(){
@@ -28,9 +28,14 @@
                                           ->get();
                 $Categorias = Categorias::withTrashed()->orderBy('Categoria', 'asc')
                                           ->get();
-
-                $Libros = libros::withTrashed()->orderBy('IdLibro', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
-                                                         ->get();
+            //Consulta
+                //$Libros = libros::withTrashed()->orderBy('IdLibro', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
+                                                        // ->get();
+                $Libros =\DB::select("SELECT l.IdLibro, l.Titulo, CONCAT(a.Nombre,' ',a.APaterno,' ',a.AMaterno) AS 'Autor' , e.Editorial, c.Categoria, l.Edicion, l.AnoPublicacion, l.delete_at
+                FROM Libros AS l
+                INNER JOIN Editoriales AS e ON e.IdEditorial = l.IdEditorial
+                INNER JOIN Categorias AS c ON c.IdCategoria = l.IdCategoria
+                INNER JOIN Autores AS a ON a.IdAutor = l.IdAutor");
  
                 return view ("Biblioteca.Libros")
                     ->with('IdLibro', $IdLibro)

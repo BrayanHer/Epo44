@@ -41,8 +41,7 @@
                 $this->validate($request,[
                     'IdAutor'   => 'required|numeric',
                     'Nombre'    =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-                    'APaterno'  =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-                    'AMaterno'  =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
+                    'APaterno'  =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
                 ]);
 
                 $Aut=new autores;

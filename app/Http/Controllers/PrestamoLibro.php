@@ -29,10 +29,13 @@
                 $Alumnos = alumnos::withTrashed()->orderBy('IdMatricula')
                                           ->get();
             
-                $Prestamo = libros::withTrashed()->orderBy('IdLibro') //withTrashed -> todos ->eliminados (lógico) o no
-                                                         ->get();
-                
- 
+                //$Prestamo = prestamolibros::withTrashed()->orderBy('IdPrestamo', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
+                  //                                        ->get();
+                $Prestamo =\DB::select("SELECT p.IdPrestamo, CONCAT(a.IdMatricula,' ',a.Nombre,' ',a.APaterno,' ',a.AMaterno) AS 'Alumno' , l.Titulo, p.FechaPrestamo, p.FechaEntrega, p.delete_at
+                FROM prestamolibros AS p
+                INNER JOIN Alumnos AS a ON a.IdMatricula = p.IdMatricula
+                INNER JOIN Libros AS l ON l.IdLibro = p.IdLibro");
+                                                          
                 return view ("Biblioteca.PrestamoLibros")
                     ->with('IdPrestamo', $IdPrestamo)
                     ->with('Libros', $Libros)

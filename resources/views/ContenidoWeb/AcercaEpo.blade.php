@@ -86,7 +86,7 @@ superior desde facultades universitarias, tecnológicos, escuelas normales, escu
 				</div>
 				<div class="col-lg-4 pt-4">
 
-					<img src="img/Logo.jpg" alt="">
+					<img src="img/Logo1.jpg" alt="">
 
 				</div>
 			</div>

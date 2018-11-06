@@ -41,7 +41,7 @@
               <a href="#">Estudiantes</a>
             </li>
             <li>
-              <a href="cards.html">Tareas</a>
+              <a href="#">Tareas</a>
             </li>
           </ul>
         </li>
@@ -55,13 +55,13 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="login.html">Tareas</a>
+              <a href="#">Tareas</a>
             </li>
             <li>
               <a href="{{route('Alumnos')}}">Información Personal</a>
             </li>
             <li>
-              <a href="forgot-password.html">Foros</a>
+              <a href="#">Foros</a>
             </li>
           </ul>
         </li>

@@ -93,9 +93,9 @@
             </h3>
 			<hr color="black" size=1>
         </div>
-        <div class="col-md-10"> 
+        <div class="col-md-12"> 
 			<table class="table">
-			<thead align="center" class="thead-dark col-md-10">
+			<thead align="center" class="thead-dark col-md-12">
 					<tr>
 						<th scope="col-md-10">Clave</th>
 						<th scope="col-md-10">Matrícula</th>
@@ -107,15 +107,15 @@
 					</tr>
 				</thead>
 			@foreach($Prestamo as $pr)
-				<tbody class="col-md-10">
+				<tbody class="col-md-12">
 				<tr align="center">
 						<th scope="row">{{$pr->IdPrestamo}}</th>
-                        <td>{{$pr->IdMatricula}}</td>
-                        <td>{{$pr->IdLibro}}</td>
+                        <td>{{$pr->Alumno}}</td>
+                        <td>{{$pr->Titulo}}</td>
                         <td>{{$pr->FechaPrestamo}}</td>
                         <td>{{$pr->FechaEntrega}}</td>
                         
-                        @if($pr->deletw_at == "")
+                        @if($pr->delete_at == "")
 						<td>
 						<button type="submit" class="btn btn-warning">
 						<i class="fa fa-fw fa-pencil-square-o"></i
