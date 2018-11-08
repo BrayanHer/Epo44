@@ -34,4 +34,7 @@ Route::POST('/Glibros','Libro@Glibros')->name('Glibros');
     //Prestamo de Libros
 Route::get('/AltasP','PrestamoLibro@AltasP')->name('AltasP');
 Route::POST('/GPrestamo','PrestamoLibro@GPrestamo')->name('GPrestamo');
-
+// Login
+Route::get('/login','login@login')->name('login');
+Route::POST('/iniciasesion','login@iniciasesion')->name('iniciasesion');
+Route::get('/principal','login@principal')->name('principal');

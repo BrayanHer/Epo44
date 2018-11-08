@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title> Administrador </title>
+  <title>Administrador</title>
   <!-- Bootstrap core CSS-->
   <link href="admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -20,81 +21,93 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html"> Administrador </a>
+    <a class="navbar-brand" href="index.html"><i class="fa fa-user"></i> &nbsp;
+  {{Session::get('sesionname')}}
+    </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        
+      
 <!-- Lista de maestros -->
+@if(Session::get('sesiontipo')=="Maestro" || Session::get('sesiontipo')=="Admin" )
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Maestros">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-users"></i>
-            <span class="nav-link-text"> Maestros </span>
+          <i class="fa fa-users"></i>
+            <span class="nav-link-text">Maestros</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="#"> Estudiantes </a>
+              <a href="#">Estudiantes</a>
             </li>
             <li>
-              <a href="#"> Tareas </a>
+              <a href="#">Tareas</a>
             </li>
           </ul>
         </li>
 <!-- fin de lista de maestros -->
-
+@endif
+@if(Session::get('sesiontipo')=="Alumno" || Session::get('sesiontipo')=="Admin")
 <!-- inicio de lista de Alumnos -->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Alumnos">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-            <i class="fa fa-graduation-cap"></i>
-            <span class="nav-link-text"> Alumnos </span>
+          <i class="fa fa-graduation-cap"></i>
+            <span class="nav-link-text">Alumnos</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="#"> Tareas </a>
+              <a href="#">Tareas</a>
             </li>
             <li>
-              <a href="{{route('Alumnos')}}"> Información Personal </a>
+              <a href="{{route('Alumnos')}}">Información Personal</a>
             </li>
             <li>
-              <a href="#"> Foros </a>
+              <a href="#">Foros</a>
             </li>
           </ul>
         </li>
 <!-- fin de lista de alumnos -->
+@endif
+@if(Session::get('sesiontipo')=="Biblioteca" || Session::get('sesiontipo')=="Admin")
 <!-- inicio de lista biblioteca -->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Biblioteca">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
-            <i class="fa fa-book"></i>
-            <span class="nav-link-text"> Biblioteca </span>
+          <i class="fa fa-book"></i>
+            <span class="nav-link-text">Biblioteca</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti">
             <li>
-              <a href="{{route('AltasP')}}"> Prestamo de Libros </a>
+              <a href="{{route('AltasP')}}">Prestamo de Libros</a>
             </li>
             <li>
-              <a href="{{route('AltasL')}}"> Libros </a>
+              <a href="{{route('AltasL')}}">Libros</a>
             </li>
             <li>
-              <a href="{{route('AltasA')}}"> Autores </a>
+              <a href="{{route('AltasA')}}">Autores</a>
             </li>
             <li>
-              <a href="{{route('AltasE')}}"> Editoriales </a>
+              <a href="{{route('AltasE')}}">Editoriales</a>
             </li>
             <li>
-              <a href="{{route('AltasC')}}"> Categorias </a>
+              <a href="{{route('AltasC')}}">Categorias</a>
             </li>
           </ul>
+  @endif
+  @if(Session::get('sesiontipo')=="Admin")
+
 <!-- fin de lista biblioteca -->
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrador">
           <a class="nav-link" href="#">
-            <i class="fa fa-sliders"></i>
+          <i class="fa fa-sliders"></i>
             <span class="nav-link-text">Administrador</span>
           </a>
         </li>
+@endif
+        <!-- -------------------------aqui se cierran los endif--- -->
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -143,11 +156,11 @@
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Busca por...">
-                <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </span>
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
             </div>
           </form>
         </li>
@@ -186,7 +199,7 @@
           <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="home">Cerrar Sesión</a>
+            <a class="btn btn-primary" href="{{route('Login')}}">Cerrar Sesión</a>
           </div>
         </div>
       </div>
