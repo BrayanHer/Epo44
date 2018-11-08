@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class prestamoLibros extends Model
 {
     use SoftDeletes;
-    protected $table = 'prestamoLibros';
+    protected $table = 'prestamolibros';
     protected $primaryKey ='IdPrestamo';
     protected $fillable=['IdPrestamo','IdMatricula','IdLibro','FechaPrestamo','FechaEntrega'];
 

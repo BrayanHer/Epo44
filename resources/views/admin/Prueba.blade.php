@@ -250,14 +250,7 @@
   <div id="tabs-3">
   <div class="container">
   <div class="row">
-  <div class="col-xl-12">
-            <div class="hidden-lg"></div>
-                <h3 class="page-header">
-                    <small>Datos Paternos</small>
-                </h3>
-				<hr color="black" size=1>
-        </div>
- 			 <div class="form-group col-xl-4">
+  <div class="form-group col-xl-4">
 				<label for="ejemplo_email_1">Nombre</label>
 				<input type="text" class="form-control" id="Namep" name="Namep"
 					placeholder="Introduce su Nombre">
@@ -286,7 +279,7 @@
 		<div class="col-xl-12">
             <div class="hidden-lg"></div>
                 <h3 class="page-header">
-                    <small>Datos Maternos</small>
+                    <small>Datos del la Madre</small>
                 </h3>
 				<hr color="black" size=1>
         </div>
