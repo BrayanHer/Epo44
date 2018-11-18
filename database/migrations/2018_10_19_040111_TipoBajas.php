@@ -11,8 +11,10 @@ class TipoBajas extends Migration
             {
                 $table->increments('IdTipoBaja');
                 $table->string('Tipo',50);
+
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             });
         }
 

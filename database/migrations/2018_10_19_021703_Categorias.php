@@ -11,8 +11,10 @@ class Categorias extends Migration
             {
                 $table->increments('IdCategoria');
                 $table->string('Categoria',50);
+
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             });
         }
 

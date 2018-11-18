@@ -17,6 +17,7 @@ class Turnos extends Migration
 
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             });
         }
 

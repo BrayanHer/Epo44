@@ -13,8 +13,10 @@ class Autores extends Migration
                 $table->string('Nombre',50);
                 $table->string('APaterno',50);
                 $table->string('AMaterno',50);
+
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             });
         }
 

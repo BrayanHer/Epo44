@@ -11,8 +11,10 @@ class Tramites extends Migration
             {
                 $table->increments('IdTramites');
                 $table->string('Tramite',50);
+
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             });
         }
 

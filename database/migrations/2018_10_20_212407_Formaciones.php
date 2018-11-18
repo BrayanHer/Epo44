@@ -33,6 +33,7 @@ class Formaciones extends Migration
 
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             });
         }
 

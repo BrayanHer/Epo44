@@ -27,6 +27,7 @@ class Libros extends Migration
                 
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             });
         }
 

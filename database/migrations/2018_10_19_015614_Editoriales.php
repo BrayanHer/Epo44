@@ -10,8 +10,10 @@ class Editoriales extends Migration
             {
                 $table->increments('IdEditorial');
                 $table->string('Editorial',50);
+
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             });
         }
 

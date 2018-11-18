@@ -17,6 +17,7 @@ public function up()
 
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             });
         }
 

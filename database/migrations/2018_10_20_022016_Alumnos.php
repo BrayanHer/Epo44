@@ -47,6 +47,7 @@ class Alumnos extends Migration
 
                 $table->rememberToken();
                 $table->timestamps();
+                $table->SoftDeletes();
             }); 
         }
 
