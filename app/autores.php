@@ -13,5 +13,5 @@ class autores extends Model
     protected $primaryKey ='IdAutor';
     protected $fillable=['IdAutor','Nombre','APaterno','AMaterno'];
 
-    protected $data = ['delete_at'];
+    protected $data = ['deleted_at'];
 }

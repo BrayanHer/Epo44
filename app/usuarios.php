@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class usuarios extends Model
 {
    use SoftDeletes;
-   protected $primaryKey = 'idu';
-   
-   protected $fillable=['idu','nombre','correo','usuario','password','tipo'];
 
+   protected $table = 'usuarios';
+   protected $primaryKey = 'idu';
+   protected $fillable=['idu','nombre','correo','usuario','password','tipo'];
+   
    protected $date=['delete_at'];
 }

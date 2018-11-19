@@ -13,5 +13,5 @@ class editoriales extends Model
     protected $primaryKey ='IdEditorial';
     protected $fillable=['IdEditorial','Editorial'];
 
-    protected $data = ['delete_at'];
+    protected $data = ['deleted_at'];
 }
