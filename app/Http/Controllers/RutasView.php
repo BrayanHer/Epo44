@@ -25,10 +25,10 @@
             return view('ContenidoWeb.AcercaEpo');
         }
         public function V_Admin(){
-            return view('Administrador');
+            return view('administrador');
         }
         public function V_Login(){
-            return view('Admin.Login');
+            return view('Admin.login');
         }
         public function V_ins(){
             return view('Admin.Prueba');

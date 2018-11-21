@@ -1,4 +1,4 @@
-@extends('Home')
+@extends('home')
 @section('homecontent')
 <!DOCTYPE html>
     <html>

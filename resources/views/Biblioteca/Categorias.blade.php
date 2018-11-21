@@ -1,4 +1,4 @@
-@extends('Administrador')
+@extends('administrador')
 @section('admincontent')
 
 <style>
@@ -78,32 +78,40 @@
 						<th scope="row">{{$ca->IdCategoria}}</th>
 						<td>{{$ca->Categoria}}</td>
 
-						@if($ca->deletw_at == "")
+						@if($ca->deleted_at == "")
 						<td>
+						<a href="{{URL::action('Categoria@MCategoria',['IdCategoria'=>$ca->IdCategoria])}}">
 							<button type="submit" class="btn btn-warning">
 								<i class="fa fa-fw fa-pencil-square-o"></i>
 									Modificar
 							</button>
+						</a>
 						</td>
 						<td>
+						<a href="{{URL::action('Categoria@ELCategoria',['IdCategoria'=>$ca->IdCategoria])}}">
 							<button type="submit" class="btn btn-danger">
 								<i class="fa fa-fw fa-toggle-off"></i>
 									Desactivar
 							</button>
+						</a>
 						</td>
 								
 						@else
 						<td>
+						<a href="{{URL::action('Categoria@ACategoria',['IdCategoria'=>$ca->IdCategoria])}}">
 							<button type="submit" class="btn btn-success">
 								<i class="fa fa-fw fa-reply"></i> 
 									&nbsp;Activar&nbsp;&nbsp;
 							</button>
+						</a>
 						</td>
 						<td>
+						<a href="{{URL::action('Categoria@EFCategoria',['IdCategoria'=>$ca->IdCategoria])}}">
 							<button type="submit" class="btn btn-danger">
 								<i class="fa fa-fw fa-trash"></i> 
 									&nbsp;&nbsp;Eliminar&nbsp;
 							</button>
+						</a>
 						</td>
 						@endif
 					</tr>

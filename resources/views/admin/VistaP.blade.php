@@ -1,4 +1,4 @@
-@extends('Administrador')
+@extends('administrador')
 @section('admincontent')
 
 <style>

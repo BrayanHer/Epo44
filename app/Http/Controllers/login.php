@@ -12,12 +12,12 @@ class login extends Controller
 {
 	public function login()
 	{
-		return view ('admin.login');
+		return view ('Admin.login');
 	}
    public function iniciasesion(Request $request)
    {
-	   $usuario = $request->usuario;
-	   $passw = $request->password;
+	   $usuario  = $request->usuario;
+	   $passw    = $request->password;
 	   $consulta = usuarios::withTrashed()->where('usuario','=',$usuario)
 	                         ->where ('password','=',$passw)
 							 ->get();

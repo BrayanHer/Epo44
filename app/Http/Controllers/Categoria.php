@@ -9,6 +9,7 @@
 
     class Categoria extends Controller
     {
+    //Alta
         public function AltasC(){
             $clavequesigue = categorias::withTrashed()->orderBy('IdCategoria', 'desc')
                                                     ->take(1)
@@ -19,8 +20,8 @@
                 else{
                     $IdCategoria = $clavequesigue[0]->IdCategoria + 1;
                 }
-
-                $Categorias = categorias::withTrashed()->orderBy('IdCategoria', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
+        //Consulta
+                $Categorias = categorias::withTrashed()->orderBy('IdCategoria', 'asc')
                                                          ->get();
                 return view ("Biblioteca.Categorias")
                     ->with('IdCategoria', $IdCategoria)
@@ -43,4 +44,51 @@
 
                     return redirect()->back(); 
             }
-    }
+
+        //Eliminación Lógica
+            public function ELCategoria($IdCategoria){
+                categorias::find($IdCategoria)->delete();
+
+                return redirect()->back();
+            }
+        
+        //Activación
+            public function ACategoria($IdCategoria){
+                categorias::withTrashed()->where('IdCategoria',$IdCategoria)->restore();
+
+                return redirect()->back();
+            }
+        
+        //Eliminación Física
+            public function EFCategoria($IdCategoria){
+                categorias::withTrashed()->where('IdCategoria',$IdCategoria)->forceDelete();
+                
+                return redirect()->back();
+            }
+
+        //Modificación
+            public function MCategoria($IdCategoria){
+                $categoria = categorias::where('IdCategoria', '=', $IdCategoria)
+                                        ->get();
+                    return view ("Biblioteca.MCategoria")
+                    ->with('categoria', $categoria[0]);
+            }
+
+            public function GMCategoria(Request $request){
+                $IdCategoria = $request->IdCategoria;        
+                $Categoria   = $request->Categoria;	 
+
+
+                    $this->validate($request,[
+                        'IdCategoria'   => 'required|numeric',
+                        'Categoria'    =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
+                    ]);
+
+                    $Cat = categorias::find($IdCategoria);
+                    $Cat->IdCategoria=$request->IdCategoria;
+                    $Cat->Categoria=$request->Categoria;
+                    $Cat->save();
+
+                return redirect('AltasC');
+            }
+   }

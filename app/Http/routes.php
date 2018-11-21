@@ -25,15 +25,28 @@ Route::POST('/GAutor','Autor@GAutor')->name('GAutor');
     //Editoriales
 Route::get('/AltasE','Editorial@AltasE')->name('AltasE');
 Route::POST('/GEditoriales','Editorial@GEditoriales')->name('GEditoriales');
+
     //Categorias
+        //Alta
 Route::get('/AltasC','Categoria@AltasC')->name('AltasC');
 Route::POST('/Gcategorias','Categoria@Gcategorias')->name('Gcategorias');
+        //Eliminación Lógica
+Route::get('/ELCategoria/{IdCategoria}','Categoria@ELCategoria')->name('ELCategoria');
+        //Activación
+Route::get('/ACategoria/{IdCategoria}','Categoria@ACategoria')->name('ACategoria');
+        //Eliminación Física
+Route::get('/EFCategoria/{IdCategoria}','Categoria@EFCategoria')->name('EFCategoria');
+        //Modificación
+Route::get('/MCategoria/{IdCategoria}','Categoria@MCategoria')->name('MCategoria');
+Route::POST('/GMCategoria','Categoria@GMCategoria')->name('GMCategoria');
+
     //Libros
 Route::get('/AltasL','Libro@AltasL')->name('AltasL');
 Route::POST('/Glibros','Libro@Glibros')->name('Glibros');
     //Prestamo de Libros
 Route::get('/AltasP','PrestamoLibro@AltasP')->name('AltasP');
 Route::POST('/GPrestamo','PrestamoLibro@GPrestamo')->name('GPrestamo');
+
 // Login
 Route::get('/login','login@login')->name('login');
 Route::POST('/iniciasesion','login@iniciasesion')->name('iniciasesion');

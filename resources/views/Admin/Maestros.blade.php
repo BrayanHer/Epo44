@@ -1,4 +1,4 @@
-@extends('Administrador')
+@extends('administrador')
 @section('admincontent')
 
 <style>
@@ -104,7 +104,7 @@
 							<td>{{$au->APaterno}}</td>
 							<td>{{$au->AMaterno}}</td>
 
-							@if($au->deletw_at == "")
+							@if($au->deleted_at == "")
 							<td>
 						<button type="submit" class="btn btn-warning">
 						<i class="fa fa-fw fa-pencil-square-o"></i>

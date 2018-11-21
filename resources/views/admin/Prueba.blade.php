@@ -1,4 +1,4 @@
-@extends('Administrador')
+@extends('administrador')
 @section('admincontent')
 <head>
   <meta charset="utf-8">
