@@ -20,11 +20,32 @@ Route::POST('/GAlumnos','Alumno@GAlumnos')->name('GAlumnos');
 
 //Biblioteca
     //Autores
+        //Alta
 Route::get('/AltasA','Autor@AltasA')->name('AltasA');
+Route::POST('/GAutores','Autor@GAutores')->name('GAutores');
+        //Eliminación Lógica
+Route::get('/ELAutor/{IdAutor}','Autor@ELAutor')->name('ELAutor');
+        //Activación
+Route::get('/AAutor/{IdAutor}','Autor@AAutor')->name('AAutor');
+        //Eliminación Física
+Route::get('/EFAutor/{IdAutor}','Autor@EFAutor')->name('EFAutor');
+        //Modificación
+Route::get('/MAutor/{IdAutor}','Autor@MAutor')->name('MAutor');
 Route::POST('/GAutor','Autor@GAutor')->name('GAutor');
+
     //Editoriales
+        //Alta
 Route::get('/AltasE','Editorial@AltasE')->name('AltasE');
 Route::POST('/GEditoriales','Editorial@GEditoriales')->name('GEditoriales');
+        //Eliminación Lógica
+Route::get('/ELEditorial/{IdEditorial}','Editorial@ELEditorial')->name('ELEditorial');
+        //Activación
+Route::get('/AEditorial/{IdEditorial}','Editorial@AEditorial')->name('AEditorial');
+        //Eliminación Física
+Route::get('/EFEditorial/{IdEditorial}','Editorial@EFEditorial')->name('EFEditorial');
+        //Modificación
+Route::get('/MEditorial/{IdEditorial}','Editorial@MEditorial')->name('MEditorial');
+Route::POST('/GEditorial','Editorial@GEditorial')->name('GEditorial');
 
     //Categorias
         //Alta
@@ -38,13 +59,34 @@ Route::get('/ACategoria/{IdCategoria}','Categoria@ACategoria')->name('ACategoria
 Route::get('/EFCategoria/{IdCategoria}','Categoria@EFCategoria')->name('EFCategoria');
         //Modificación
 Route::get('/MCategoria/{IdCategoria}','Categoria@MCategoria')->name('MCategoria');
-Route::POST('/GMCategoria','Categoria@GMCategoria')->name('GMCategoria');
+Route::POST('/GCategoria','Categoria@GCategoria')->name('GCategoria');
 
     //Libros
+        //Alta
 Route::get('/AltasL','Libro@AltasL')->name('AltasL');
 Route::POST('/Glibros','Libro@Glibros')->name('Glibros');
+        //Eliminación Lógica
+Route::get('/ELLibro/{IdLibro}','Libro@ELLibro')->name('ELLibro');
+        //Activación
+Route::get('/ALibro/{IdLibro}','Libro@ALibro')->name('ALibro');
+        //Eliminación Física
+Route::get('/EFLibro/{IdLibro}','Libro@EFLibro')->name('EFLibro');
+        //Modificación
+Route::get('/MLibro/{IdLibro}','Libro@MLibro')->name('MLibro');
+Route::POST('/GLibro','Libro@GLibro')->name('GLibro');
+
     //Prestamo de Libros
+        //Alta
 Route::get('/AltasP','PrestamoLibro@AltasP')->name('AltasP');
+Route::POST('/GPrestamos','PrestamoLibro@GPrestamos')->name('GPrestamos');
+        //Eliminación Lógica
+Route::get('/ELPrestamo/{IdPrestamo}','PrestamoLibro@ELPrestamo')->name('ELPrestamo');
+        //Activación
+Route::get('/APrestamo/{IdPrestamo}','PrestamoLibro@APrestamo')->name('APrestamo');
+        //Eliminación Física
+Route::get('/EFPrestamo/{IdPrestamo}','PrestamoLibro@EFPrestamo')->name('EFPrestamo');
+        //Modificación
+Route::get('/MPrestamo/{IdPrestamo}','PrestamoLibro@MPrestamo')->name('MPrestamo');
 Route::POST('/GPrestamo','PrestamoLibro@GPrestamo')->name('GPrestamo');
 
 // Login

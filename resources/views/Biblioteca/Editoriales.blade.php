@@ -81,29 +81,37 @@
                         
                         @if($ed->deleted_at == "")
 						<td>
+						<a href="{{URL::action('Editorial@MEditorial',['IdEditorial'=>$ed->IdEditorial])}}">
 							<button type="submit" class="btn btn-warning">
 								<i class="fa fa-fw fa-pencil-square-o"></i>
 									Modificar
 							</button>
+						</a>
 						</td>
 						<td>
+						<a href="{{URL::action('Editorial@ELEditorial',['IdEditorial'=>$ed->IdEditorial])}}">
 							<button type="submit" class="btn btn-danger">
 								<i class="fa fa-fw fa-toggle-off"></i>
 									Desactivar
 								</button>
+						</a>
 						</td>		
 						@else
 						<td>
+						<a href="{{URL::action('Editorial@AEditorial',['IdEditorial'=>$ed->IdEditorial])}}">
 							<button type="submit" class="btn btn-success">
 								<i class="fa fa-fw fa-reply"></i> 
 									&nbsp;Activar&nbsp;&nbsp;
 							</button>
+						</a>
 						</td>
 						<td>
+						<a href="{{URL::action('Editorial@EFEditorial',['IdEditorial'=>$ed->IdEditorial])}}">
 							<button type="submit" class="btn btn-danger">
 								<i class="fa fa-fw fa-trash"></i> 
 									&nbsp;&nbsp;Eliminar&nbsp;
 							</button>
+						</a>
 						</td>
 						@endif
 					</tr>

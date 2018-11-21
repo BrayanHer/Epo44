@@ -8,7 +8,7 @@
 }
 </style>
 
-	<form action="{{route('GAutor')}}" method="POST" enctype='multipart/form-data'>                        
+	<form action="{{route('GAutores')}}" method="POST" enctype='multipart/form-data'>                        
 		{{csrf_field()}}
 		<div class="container">
 			<div class="row">
@@ -103,32 +103,40 @@
 							<td>{{$au->APaterno}}</td>
 							<td>{{$au->AMaterno}}</td>
 
-							@if($au->deletw_at == "")
+							@if($au->deleted_at == "")
 							<td>
+							<a href="{{URL::action('Autor@MAutor',['IdAutor'=>$au->IdAutor])}}">
 								<button type="submit" class="btn btn-warning">
 									<i class="fa fa-fw fa-pencil-square-o"></i>
 										Modificar
 								</button>
+							</a>
 							</td>
 							<td>
+							<a href="{{URL::action('Autor@ELAutor',['IdAutor'=>$au->IdAutor])}}">
 								<button type="submit" class="btn btn-danger">
 									<i class="fa fa-fw fa-toggle-off"></i>
 										Desactivar
 								</button>
+							</a>
 							</td>
 								
 							@else
 							<td>
+							<a href="{{URL::action('Autor@AAutor',['IdAutor'=>$au->IdAutor])}}">
 								<button type="submit" class="btn btn-success">
 									<i class="fa fa-fw fa-reply"></i> 
 										&nbsp;Activar&nbsp;&nbsp;
 								</button>
+							</a>
 							</td>
 							<td>
+							<a href="{{URL::action('Autor@EFAutor',['IdAutor'=>$au->IdAutor])}}">
 								<button type="submit" class="btn btn-danger">
 									<i class="fa fa-fw fa-trash"></i> 
 										&nbsp;&nbsp;Eliminar&nbsp;
 								</button>
+							</a>
 							</td>
 							@endif	
 						</tr>

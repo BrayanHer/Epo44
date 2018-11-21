@@ -74,7 +74,7 @@
                     ->with('categoria', $categoria[0]);
             }
 
-            public function GMCategoria(Request $request){
+            public function GCategoria(Request $request){
                 $IdCategoria = $request->IdCategoria;        
                 $Categoria   = $request->Categoria;	 
 

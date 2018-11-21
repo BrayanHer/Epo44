@@ -1,7 +1,7 @@
 @extends('administrador')
 @section('admincontent')
     
-<form action="{{route('GMCategoria')}}" method="POST" enctype='multipart/form-data'>                         
+<form action="{{route('GCategoria')}}" method="POST" enctype='multipart/form-data'>                         
 	{{csrf_field()}}
 	<div class="container">
 		<div ciilass="row">

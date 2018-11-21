@@ -46,43 +46,47 @@
 										placeholder="Introduce el Título">
 								</div>
 
-								Seleccione autor:  <br>
-									<select name='IdAutor'>
+								<label for="ejemplo_email_1"> Autor </label>
+									<select class="form-control col-xl-12" name='IdAutor'>
 										@foreach($Autores as $au)
-											<option value='{{$au->IdAutor}}'>{{$au->Nombre}} </option>
+											<option> Seleccione un Autor </option>
+											<option value='{{$au->IdAutor}}'>{{$au->Nombre}} {{$au->APaterno}} </option>
 										@endforeach
 									</select>
-								<br>	<br>
-								Seleccione Editorial:  <br>
-									<select name='IdEditorial'>
-				         				@foreach($Editoriales as $ed)
-				          					<option value='{{$ed->IdEditorial}}'>{{$ed->Editorial}} </option>
-				         				@endforeach
-        							</select>
+										
+								<label for="ejemplo_email_1"> Editorial </label>
+									<select class="form-control col-xl-12" name='IdEditorial'>
+										@foreach($Editoriales as $ed)
+											<option> Seleccione un Editorial </option>
+											<option value='{{$ed->IdEditorial}}'>{{$ed->Editorial}} </option>
+										@endforeach
+									</select>
+									<div class="row">
+										@if($errors->first('Edicion')) 
+											<i> {{$errors->first('Edicion')}} </i> 
+										@endif	
+										<div class="form-group col-xl-6">
+											<label for="ejemplo_email_1"> Edición </label>
+											<input type="text" class="form-control" id="Edicion" name="Edicion" value="{{old('Edicion')}}" 
+												placeholder="Introduce la Edición">
+										</div>
 
-								@if($errors->first('Edicion')) 
-									<i> {{$errors->first('Edicion')}} </i> 
-								@endif	
-								<div class="form-group col-xl-12">
-									<label for="ejemplo_email_1"> Edición </label>
-									<input type="text" class="form-control" id="Edicion" name="Edicion" value="{{old('Edicion')}}" 
-										placeholder="Introduce la Edición">
-								</div>
+										@if($errors->first('AnoPublicacion')) 
+											<i> {{$errors->first('AnoPublicacion')}} </i> 
+										@endif	
+										<div class="form-group col-xl-5">
+											<label for="ejemplo_email_1"> Año Publicación </label>
+											<input type="Date" class="form-control" id="AnoPublicacion" name="AnoPublicacion" value="{{old('AnoPublicacion')}}" 	placeholder="Introduce el Año Publicación">
+										</div>
+									</div>
 
-								@if($errors->first('AnoPublicacion')) 
-									<i> {{$errors->first('AnoPublicacion')}} </i> 
-								@endif	
-								<div class="form-group col-xl-12">
-									<label for="ejemplo_email_1"> Año Publicación </label>
-									<input type="Date" class="form-control" id="AnoPublicacion" name="AnoPublicacion" value="{{old('AnoPublicacion')}}" 	placeholder="Introduce el Año Publicación">
-								</div>
-
-								Seleccione categoria: <br>
-									<select name='IdCategoria'>
-				         				@foreach($Categorias as $ca)
-				          					<option value='{{$ca->IdCategoria}}'>{{$ca->Categoria}} </option>
-				         				@endforeach
-        							</select>
+								<label for="ejemplo_email_1"> Categoria </label>
+									<select class="form-control col-xl-12" name='IdEditorial'>
+										@foreach($Categorias as $ca)
+											<option> Seleccione una Categoria </option>
+											<option value='{{$ca->IdCategoria}}'>{{$ca->Categoria}} </option>
+										@endforeach
+									</select>
 		 		  			</div>
       
 				  			<div class="modal-footer">
@@ -129,31 +133,39 @@
                         <td>{{$li->AnoPublicacion}}</td>
                         <td>{{$li->Categoria}}</td>
 						
-                    @if($li->delete_at == "")
+                    @if($li->deleted_at == "")
 						<td>
+						<a href="{{URL::action('Libro@MLibro',['IdLibro'=>$li->IdLibro])}}">
 							<button type="submit" class="btn btn-warning">
 								<i class="fa fa-fw fa-pencil-square-o"></i>
 									Modificar
 							</button>
+						</a>
 						</td>
 						<td>
+						<a href="{{URL::action('Libro@ELLibro',['IdLibro'=>$li->IdLibro])}}">
 							<button type="submit" class="btn btn-danger">
 								<i class="fa fa-fw fa-toggle-off"></i>
 									Desactivar
 							</button>
+						</a>
 						</td>			
 					@else
 						<td>
+						<a href="{{URL::action('Libro@ALibro',['IdLibro'=>$li->IdLibro])}}">
 							<button type="submit" class="btn btn-success">
 								<i class="fa fa-fw fa-reply"></i> 
 									&nbsp;Activar&nbsp;&nbsp;
 							</button>
+						</a>
 						</td>
 						<td>
+						<a href="{{URL::action('Libro@EFLibro',['IdLibro'=>$li->IdLibro])}}">
 							<button type="submit" class="btn btn-danger">
 								<i class="fa fa-fw fa-trash"></i> 
 									&nbsp;&nbsp;Eliminar&nbsp;
 							</button>
+						</a>
 						</td>
 					@endif
 					</tr>

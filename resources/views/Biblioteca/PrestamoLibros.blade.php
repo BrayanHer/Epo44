@@ -7,8 +7,8 @@
 	padding:1px;
 }
 </style>
-
-    <form action="{{route('GPrestamo')}}" method="POST" enctype='multipart/form-data'>                        
+y
+    <form action="{{route('GPrestamos')}}" method="POST" enctype='multipart/form-data'>                        
    		{{csrf_field()}}
 		<div class="container">
 			<div class="row">
@@ -42,8 +42,12 @@
 								@endif	
 								<div class="form-group col-xl-12">
 									<label for="ejemplo_email_1"> Matrícula </label>
-									<input type="text" class="form-control" id="IdMatricula" name="IdMatricula" value="{{old('IdMatricula')}}" 
-										placeholder="Introduce la Matrícula">
+            							<select class="form-control" name='IdMatricula'>
+											@foreach($Alumnos as $al)
+												<option> Seleccione una Matrícula </option>
+												<option value='{{$al->IdMatricula}}'>{{$al->IdMatricula}} </option>
+											@endforeach
+										</select>
 								</div>
 
 								@if($errors->first('IdLibro')) 
@@ -51,8 +55,12 @@
 								@endif	
 								<div class="form-group col-xl-12">
 									<label for="ejemplo_email_1"> Libro </label>
-									<input type="text" class="form-control" id="IdLibro" name="IdLibro" value="{{old('IdLibro')}}" 
-										placeholder="Introduce el Libro">
+									<select class="form-control" name='IdLibro'>
+										@foreach($Libros as $li)
+											<option> Seleccione un Libro </option>
+											<option value='{{$li->IdLibro}}'>{{$li->Titulo}} </option>
+										@endforeach
+									</select>
 								</div>
 
 								@if($errors->first('FechaPrestamo')) 
@@ -114,31 +122,39 @@
                         <td>{{$pr->FechaPrestamo}}</td>
                         <td>{{$pr->FechaEntrega}}</td>
                         
-                        @if($pr->delete_at == "")
+                        @if($pr->deleted_at == "")
 						<td>
+						<a href="{{URL::action('PrestamoLibro@MPrestamo',['IdPrestamo'=>$pr->IdPrestamo])}}">
 							<button type="submit" class="btn btn-warning">
 								<i class="fa fa-fw fa-pencil-square-o"></i>
 									Modificar
 							</button>
+						</a>
 						</td>
 						<td>
+						<a href="{{URL::action('PrestamoLibro@ELPrestamo',['IdPrestamo'=>$pr->IdPrestamo])}}">
 							<button type="submit" class="btn btn-danger">
 								<i class="fa fa-fw fa-toggle-off"></i>
 									Desactivar
 							</button>
+						</a>
 						</td>	
 						@else
 						<td>
+						<a href="{{URL::action('PrestamoLibro@APrestamo',['IdPrestamo'=>$pr->IdPrestamo])}}">
 							<button type="submit" class="btn btn-success">
 								<i class="fa fa-fw fa-reply"></i> 
 									&nbsp;Activar&nbsp;&nbsp;
 							</button>
+						</a>
 						</td>
 						<td>
+						<a href="{{URL::action('PrestamoLibro@EFPrestamo',['IdPrestamo'=>$pr->IdPrestamo])}}">
 							<button type="submit" class="btn btn-danger">
 								<i class="fa fa-fw fa-trash"></i> 
 									&nbsp;&nbsp;Eliminar&nbsp;
 							</button>
+						</a>
 						</td>
 						@endif
 					</tr>
