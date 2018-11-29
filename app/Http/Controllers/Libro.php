@@ -23,20 +23,20 @@
                 else{
                     $IdLibro = $clavequesigueL[0]->IdLibro + 1;
                 }
-                $Autores = Autores::withTrashed()->orderBy('Nombre', 'asc')->orderBy('APaterno', 'asc')
+                $Autores = autores::withTrashed()->orderBy('Nombre', 'asc')->orderBy('APaterno', 'asc')
                                           ->get();
-                $Editoriales = Editoriales::withTrashed()->orderBy('Editorial', 'asc')
+                $Editoriales = editoriales::withTrashed()->orderBy('Editorial', 'asc')
                                           ->get();
-                $Categorias = Categorias::withTrashed()->orderBy('Categoria', 'asc')
+                $Categorias = categorias::withTrashed()->orderBy('Categoria', 'asc')
                                           ->get();
             //Consulta
                 //$Libros = libros::withTrashed()->orderBy('IdLibro', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
                                                         // ->get();
                 $Libros =\DB::select("SELECT l.IdLibro, l.Titulo, CONCAT(a.Nombre,' ',a.APaterno,' ',a.AMaterno) AS 'Autor' , e.Editorial, c.Categoria, l.Edicion, l.AnoPublicacion, l.deleted_at
-                FROM Libros AS l
-                INNER JOIN Editoriales AS e ON e.IdEditorial = l.IdEditorial
-                INNER JOIN Categorias AS c ON c.IdCategoria = l.IdCategoria
-                INNER JOIN Autores AS a ON a.IdAutor = l.IdAutor");
+                FROM libros AS l
+                INNER JOIN editoriales AS e ON e.IdEditorial = l.IdEditorial
+                INNER JOIN categorias AS c ON c.IdCategoria = l.IdCategoria
+                INNER JOIN autores AS a ON a.IdAutor = l.IdAutor");
  
                 return view ("Biblioteca.Libros")
                     ->with('IdLibro', $IdLibro)
