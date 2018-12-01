@@ -222,7 +222,7 @@
   </div>
   <div>
                         @yield('admincontent')
-                  </div>
+                  </div> Hola
 </body>
 
 </html>
