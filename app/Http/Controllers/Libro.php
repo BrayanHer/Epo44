@@ -37,13 +37,23 @@
                 INNER JOIN Editoriales AS e ON e.IdEditorial = l.IdEditorial
                 INNER JOIN Categorias AS c ON c.IdCategoria = l.IdCategoria
                 INNER JOIN Autores AS a ON a.IdAutor = l.IdAutor");
+
+
+
+if(Session::get('sesionidu')!="")
+return view ("Biblioteca.Libros")
+->with('IdLibro', $IdLibro)
+->with('Autores', $Autores)
+->with('Editoriales', $Editoriales)
+->with('Categorias', $Categorias)
+->with('Libros', $Libros);
+								  else{
+									  Session::flash('error', 'Debe iniciar sesion');
+									  return redirect()->route('login');
+								  }
+
  
-                return view ("Biblioteca.Libros")
-                    ->with('IdLibro', $IdLibro)
-                    ->with('Autores', $Autores)
-                    ->with('Editoriales', $Editoriales)
-                    ->with('Categorias', $Categorias)
-                    ->with('Libros', $Libros);
+           
             }
        
             public function Glibros(Request $request){
@@ -104,8 +114,10 @@
                                                 ->get();
                 
                 $IdAutor = $libro[0]->IdAutor; 
+
                     $Autor = autores::where('IdAutor','=', $IdAutor)
                                         ->get();
+                                        
                     $Autores = autores::where('IdAutor','!=',$IdAutor)
                                         ->get();
 
@@ -120,18 +132,27 @@
                                                 ->get();
                     $Editoriales = editoriales::where('IdEditorial', '!=', $IdEditorial)
                                                 ->get();
+
+                                                if(Session::get('sesionidu')!="")
+                                                return view('Biblioteca.MLibro')
+                                                ->with('libro',$libro[0])
+                                                ->with('IdAutor',$IdAutor)
+                                                ->with('Autor',$Autor[0]->Nombre)
+                                                ->with('Autores',$Autores)
+                                                ->with('IdEditorial',$IdEditorial)
+                                                ->with('Editorial',$Editorial[0]->Editorial)
+                                                ->with('Editoriales', $Editoriales)
+                                                ->with('IdCategoria',$IdCategoria)
+                                                ->with('Categoria',$Categoria[0]->Categoria)
+                                                ->with('Categorias',$Categorias);
+                                                                          else{
+                                                                              Session::flash('error', 'Debe iniciar sesion');
+                                                                              return redirect()->route('login');
+                                                                          }
+
+
                  
-                   return view('Biblioteca.MLibro')
-                            ->with('libro',$libro[0])
-                            ->with('IdAutor',$IdAutor)
-                            ->with('Autor',$Autor[0]->Nombre)
-                            ->with('Autores',$Autores)
-                            ->with('IdEditorial',$IdEditorial)
-                            ->with('Editorial',$Editorial[0]->Editorial)
-                            ->with('Editoriales', $Editoriales)
-                            ->with('IdCategoria',$IdCategoria)
-                            ->with('Categoria',$Categoria[0]->Categoria)
-                            ->with('Categorias',$Categorias);
+
             }
 
             public function GLibro(Request $request){
