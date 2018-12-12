@@ -6,6 +6,7 @@
  use App\Http\Controllers\Controller;
 
  use App\categorias;
+ use Session;
 
     class Categoria extends Controller
     {
@@ -23,9 +24,16 @@
         //Consulta
                 $Categorias = categorias::withTrashed()->orderBy('IdCategoria', 'asc')
                                                          ->get();
-                return view ("Biblioteca.Categorias")
-                    ->with('IdCategoria', $IdCategoria)
-                    ->with('Categorias', $Categorias);
+
+                                                         if(Session::get('sesionidu')!="")
+                                                         return view ("Biblioteca.Categorias")
+                                                         ->with('IdCategoria', $IdCategoria)
+                                                         ->with('Categorias', $Categorias);
+                                      else{
+                                          Session::flash('error', 'Debe iniciar sesion');
+                                          return redirect()->route('login');
+                                      }
+              
             }
 
             public function Gcategorias(Request $request){
@@ -37,10 +45,10 @@
                         'Categoria'    =>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
                     ]);
 
-                    $Cat=new categorias;
-                    $Cat->IdCategoria=$request->IdCategoria;
-                    $Cat->Categoria=$request->Categoria;
-                    $Cat->save();	
+                        $Cat=new categorias;
+                        $Cat->IdCategoria=$request->IdCategoria;
+                        $Cat->Categoria=$request->Categoria;
+                        $Cat->save();	
 
                     return redirect()->back(); 
             }
@@ -70,8 +78,16 @@
             public function MCategoria($IdCategoria){
                 $categoria = categorias::where('IdCategoria', '=', $IdCategoria)
                                         ->get();
-                    return view ("Biblioteca.MCategoria")
+
+                                        if(Session::get('sesionidu')!="")
+                                        return view ("Biblioteca.MCategoria")
                     ->with('categoria', $categoria[0]);
+                     else{
+                         Session::flash('error', 'Debe iniciar sesion');
+                         return redirect()->route('login');
+                     }
+
+                   
             }
 
             public function GCategoria(Request $request){

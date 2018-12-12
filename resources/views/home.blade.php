@@ -8,17 +8,17 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="{{asset('img/favicon.png')}}" rel="icon">
-  <link href="{{asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
 
   <!-- Bootstrap CSS File -->
-  <link href="{{asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Libraries CSS Files -->
-  <link href="{{asset('lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!-- Main Stylesheet File -->
-  <link href="{{asset('css/style1.css')}}" rel="stylesheet">
+  <link href="css/style1.css" rel="stylesheet">
 </head>
 
 <body id="body">
@@ -46,40 +46,42 @@
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <h1> <a href="{{route('home')}}" class="scrollto"> Epo <span> &nbsp; No.44 </span> </a> </h1>
+        <h1> <a href="" class="scrollto"> Epo <span> &nbsp; No.44 </span> </a> </h1>
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"> <a href="{{route('home')}}"> Inicio </a> </li>
-          <li> <a href=""> Servicios y Tramites </a> </li><!--poner la vista respectiva con el codigo "('aqui va el nombre de la ruta')"-->
+          <li class="menu-active"> <a href=""> Inicio </a> </li>
+        
+            <li> <a href="{{route('Servicios')}}"> Servicios y Tramites </a> </li>
+          
+          <!--poner la vista respectiva con el codigo "('aqui va el nombre de la ruta')"-->
           <li> <a href="{{route('Acerca')}}"> Acerca de la EPO No.44 </a> </li>
-          <li> <a href=""> Vinculación </a> </li>
+          <li> <a href="{{route('Vinculacion')}}"> Vinculación </a> </li>
           <li> <a href="{{route('Ubicacion')}}"> Ubicación </a> </li>
           <li> <a href="{{route('Login')}}"> Iniciar Sesión </a> </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header>
-
-  <script src="{{asset('lib/jquery/jquery.min.js')}}"></script>
-  <script src="{{asset('lib/jquery/jquery-migrate.min.js')}}')}}"></script>
-  <script src="{{asset('lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('lib/easing/easing.min.js')}}"></script>
-  <script src="{{asset('lib/superfish/hoverIntent.js')}}"></script>
-  <script src="{{asset('lib/superfish/superfish.min.js')}}"></script>
-  <script src="{{asset('lib/wow/wow.min.js')}}"></script>
-  <script src="{{asset('lib/owlcarousel/owl.carousel.min.js')}}"></script>
-  <script src="{{asset('lib/magnific-popup/magnific-popup.min.js')}}"></script>
-  <script src="{{asset('lib/sticky/sticky.js')}}"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
   <!-- Uncomment below if you want to use dynamic Google Maps -->
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script> -->
 
   <!-- Contact Form JavaScript File -->
-  <script src="{{asset('contactform/contactform.js')}}"></script>
+  <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="{{asset('js/main.js')}}"></script>
+  <script src="js/main.js"></script>
 </body>
 <div id="page-wrapper2">
         @yield('homecontent')

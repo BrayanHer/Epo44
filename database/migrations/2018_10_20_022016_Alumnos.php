@@ -16,8 +16,8 @@ class Alumnos extends Migration
                 $table->integer('Edad');
                 $table->string('Sexo',5);
                 $table->date('FechaNac');
-                $table->integer('Celular');
-                $table->integer('TelFijo');
+                $table->string('Celular');
+                $table->string('TelFijo');
                 $table->string('Email',50);
                 $table->string('Calle',50);
                 $table->string('NumInt',100);
@@ -34,11 +34,11 @@ class Alumnos extends Migration
                 $table->string('NombrePadre',50);
                 $table->string('APPadre',50);
                 $table->string('AMPadre',50);
-                $table->integer('CelularPadre');
+                $table->string('CelularPadre');
                 $table->string('NombreMadre',50);
                 $table->string('APMadre',50);
                 $table->string('AMMadre',50);
-                $table->integer('CelularMadre');
+                $table->string('CelularMadre');
                 $table->string('Curp',50);
                 $table->string('ActNacimiento',50);
                 $table->string('FolioAsignado',50);

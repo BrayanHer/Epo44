@@ -13,10 +13,22 @@ Route::get('/Login','RutasView@V_Login')->name('Login');
 Route::get('/Administrador','RutasView@V_Admin')->name('Administrador');
 Route::get('/Vps','RutasView@Vps')->name('Vps');
 Route::get('/Ubicacion','RutasView@V_Ubicacion')->name('Ubicacion');
-
+Route::get('/Administracion','RutasView@Administracion')->name('Administracion');
+Route::get('/Servicios','RutasView@V_Servicios')->name('Servicios');
+Route::get('/Vinculacion','RutasView@V_Vinculacion')->name('Vinculacion');
+Route::get('/Reinscripciones','RutasView@V_Reinscripciones')->name('Reinscripciones');
+Route::get('/Inscripciones','RutasView@V_Inscripciones')->name('Inscripciones');
+Route::get('/Tramites','RutasView@V_Tramites')->name('Tramites');
 //--method---Alias de la vista--/controlador----funcion----name+alias de la visa
 Route::get('/Alumnos','Alumno@Alumnos')->name('Alumnos');
 Route::POST('/GAlumnos','Alumno@GAlumnos')->name('GAlumnos');
+Route::get('/C_alumno','Alumno@C_alumno')->name('C_alumno');
+//Eliminación Lógica
+Route::get('/Des_Alumno/{IdMatricula}','Alumno@Des_Alumno')->name('Des_Alumno');
+        //Activación
+Route::get('/Act_Alumno/{IdMatricula}','Alumno@Act_Alumno')->name('Act_Alumno');
+        //Eliminación Física
+Route::get('/Del_Alumno/{IdMatricula}','Alumno@Del_Alumno')->name('Del_Alumno');
 
 //Biblioteca
     //Autores
@@ -93,3 +105,14 @@ Route::POST('/GPrestamo','PrestamoLibro@GPrestamo')->name('GPrestamo');
 Route::get('/login','login@login')->name('login');
 Route::POST('/iniciasesion','login@iniciasesion')->name('iniciasesion');
 Route::get('/principal','login@principal')->name('principal');
+Route::get('/cerrarsesion','login@cerrarsesion')->name('cerrarsesion');
+// Maestro
+Route::get('/Maestros','Maestro@Maestros')->name('Maestros');
+Route::POST('/G_Maestro','Maestro@G_Maestro')->name('G_Maestro');
+Route::get('/C_Maestros','Maestro@C_Maestros')->name('C_Maestros');
+//Eliminación Lógica
+Route::get('/Des_Maestro/{IdMaestro}','Maestro@Des_Maestro')->name('Des_Maestro');
+        //Activación
+Route::get('/Act_Maestro/{IdMaestro}','Maestro@Act_Maestro')->name('Act_Maestro');
+        //Eliminación Física
+Route::get('/Del_Categoria/{IdMaestro}','Maestro@Del_Categoria')->name('Del_Categoria');

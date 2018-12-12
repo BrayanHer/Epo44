@@ -6,6 +6,7 @@
  use App\Http\Controllers\Controller;
 
  use App\editoriales;
+ use Session;
 
     class Editorial extends Controller
     {
@@ -23,11 +24,18 @@
         //Consulta
             $Editoriales = editoriales::withTrashed()->orderBy('IdEditorial', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
                                             ->get();
+
+                                         
+                                        if(Session::get('sesionidu')!="")
+                                        return view ("Biblioteca.Editoriales")
+                                        ->with('IdEditorial', $IdEditorial)           
+                                        ->with('Editoriales', $Editoriales);
+                     else{
+                         Session::flash('error', 'Debe iniciar sesion');
+                         return redirect()->route('login');
+                     }   
             
-            return view ("Biblioteca.Editoriales")
-                ->with('IdEditorial', $IdEditorial)           
-                ->with('Editoriales', $Editoriales);
-    
+  
         }
     
             public function GEditoriales(Request $request){
@@ -72,8 +80,15 @@
         public function MEditorial($IdEditorial){
             $editorial = editoriales::where('IdEditorial', '=', $IdEditorial)
                                     ->get();
+
+                                    if(Session::get('sesionidu')!="")
                 return view ("Biblioteca.MEditorial")
                 ->with('editorial', $editorial[0]);
+                 else{
+                     Session::flash('error', 'Debe iniciar sesion');
+                     return redirect()->route('login');
+                 }   
+
         }
 
         public function GEditorial(Request $request){

@@ -13,6 +13,8 @@ class Maestros extends Migration
             $table->string('NombreM',50);
             $table->string('APaterno',50);
             $table->string('AMaterno',50); 
+            $table->string('Correo',50);
+            $table->string('Matricula',50); 
 
             $table->rememberToken();
             $table->timestamps();

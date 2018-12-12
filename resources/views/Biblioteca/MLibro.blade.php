@@ -39,7 +39,7 @@
 					<select class="form-control" name='IdEditorial'>
 						<option value='{{$IdEditorial}}'>{{$Editorial}}</option>
 						@foreach($Editoriales as $ed)
-							<option value='{{$ed->IdEditorial}}'>{{$ed->IdEditorial}} </option>	
+							<option value='{{$ed->IdEditorial}}'>{{$ed->Editorial}} </option>	
 						@endforeach
 					</select>
 			<br>	<br>

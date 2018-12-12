@@ -6,18 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author
+  " content="">
   <title>Administrador</title>
   <!-- Bootstrap core CSS-->
-  <link href="{{asset('admin/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="{{asset('admin/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
-  <link href="{{asset('admin/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
+  <link href="admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="{{asset('admin/css/sb-admin.css')}}" rel="stylesheet">
+  <link href="admin/css/sb-admin.css" rel="stylesheet">
 </head>
-
+<style>
+#Bag{
+  color:rgb(0, 86, 179);
+}
+</style>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -61,14 +66,19 @@
             <li>
               <a href="#">Tareas</a>
             </li>
+            @if(Session::get('sesionreg')=="si")
+            
+           @else
             <li>
               <a href="{{route('Alumnos')}}">Información Personal</a>
             </li>
-            <li>
+             @endif
+             <li>
               <a href="#">Foros</a>
             </li>
           </ul>
         </li>
+
 <!-- fin de lista de alumnos -->
 @endif
 @if(Session::get('sesiontipo')=="Biblioteca" || Session::get('sesiontipo')=="Admin")
@@ -101,7 +111,7 @@
 <!-- fin de lista biblioteca -->
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrador">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{{route('Administracion')}}">
           <i class="fa fa-sliders"></i>
             <span class="nav-link-text">Administrador</span>
           </a>
@@ -171,14 +181,42 @@
       </ul>
     </div>
   </nav>
+
+  
   <div class="content-wrapper">
     <div class="container-fluid">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a id="Bag"href="#">Administrador</a>
+        </li>
+        <li class="breadcrumb-item active">Admnistración del sistema</li>
+      </ol>
+    <div   class="cotainer col-md-12">
+    
+    <div class="row">
+    
+    <!-- aqui va el calendario -->
+    <div class="col-sm-7">
+    
+    </div>
+<!-- Aqui finaliza -->
+
+      <div class="row">
+      <br><br>
+      </div>
+    <!-- aqui terminan los correos -->
+   </div>
+    
+    </div>
+
     
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
+        <!-- numeros de soporte tecnico y correos -->
           <small></small>
+<!-- termina coreros y soporte -->
         </div>
       </div>
     </footer>
@@ -206,19 +244,19 @@
     </div>
                   
     <!-- Bootstrap core JavaScript-->
-    <script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="admin/vendor/jquery/jquery.min.js"></script>
+    <script src="admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
-    <script src="{{asset('admin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+    <script src="admin/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="{{asset('admin/vendor/chart.js/Chart.min.js')}}"></script>
-    <script src="{{asset('admin/vendor/datatables/jquery.dataTables.js')}}"></script>
-    <script src="{{asset('admin/vendor/datatables/dataTables.bootstrap4.js')}}"></script>
+    <script src="admin/vendor/chart.js/Chart.min.js"></script>
+    <script src="admin/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="admin/vendor/datatables/dataTables.bootstrap4.js"></script>
     <!-- Custom scripts for all pages-->
-    <script src="{{asset('admin/js/sb-admin.min.js')}}"></script>
+    <script src="admin/js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
-    <script src="{{asset('admin/js/sb-admin-datatables.min.js')}}"></script>
-    <script src="{{asset('admin/js/sb-admin-charts.min.js')}}"></script>
+    <script src="admin/js/sb-admin-datatables.min.js"></script>
+    <script src="admin/js/sb-admin-charts.min.js"></script>
   </div>
   <div>
                         @yield('admincontent')

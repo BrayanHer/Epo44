@@ -60,8 +60,7 @@ class login extends Controller
 	   return view ('administrador');
        else
 	   {
-		Session::flash('error', 'Favor de loguearse antes de 
-		continuar');
+		Session::flash('error', 'Favor de loguearse antes de continuar');
 		 return redirect()->route('login');
 	   }
    }

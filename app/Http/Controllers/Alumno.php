@@ -7,7 +7,8 @@ use App\Http\Requests;
 use App\Alumnos;
 use App\Municipios;
 use App\Localidades;
-
+use App\Usuarios;
+use Session;
 
 
 class Alumno extends Controller
@@ -19,9 +20,15 @@ class Alumno extends Controller
 	 	 $Localidades = Localidades::orderBy('IdLoc', 'asc')
      	 						->get();
 				
-     	 return view ("Admin.Prueba")
-				->with('Municipios', $Municipios)
-				->with('Localidades', $Localidades);
+								  if(Session::get('sesionid')!="")
+								  return view ("Alumnos.Registro")
+								  ->with('Municipios', $Municipios)
+								  ->with('Localidades', $Localidades);
+								  else{
+									  Session::flash('error', 'Debe iniciar sesion');
+									  return redirect()->route('login');
+								  }
+     
 
 
 	}
@@ -57,6 +64,14 @@ class Alumno extends Controller
 			$FolioAsignado=$request->FolioAsignado;
 			$SecProcedencia=$request->SecProcedencia;        
 			$CertificadoSec=$request->CertificadoSec;
+			// dd($Celular);
+			// ------------se utiliza para el login-----
+		
+			
+			
+			$User_name=$request->Nombre.' '.$request->APaterno;
+			// dd($User_name);
+
 			$this->validate($request,[
 				'IdMatricula'   => 'required|numeric',
 				'Nombre'    	=>'required',['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
@@ -89,7 +104,7 @@ class Alumno extends Controller
 
 				
 			]);
-			
+
 			$Per=new Alumnos;
 			$Per->IdMatricula=$request->IdMatricula;
 			$Per->Nombre=$request->Nombre;
@@ -121,6 +136,55 @@ class Alumno extends Controller
 			$Per->FolioAsignado=$request->FolioAsignado;
 			$Per->SecProcedencia=$request->SecProcedencia;
 			$Per->CertificadoSec=$request->CertificadoSec;
+			
+// dd($Per->Celular=$request->Celular);
 			$Per->save();
+
+			$login = new Usuarios;
+			$login->nombre=$User_name;
+			$login->correo=$request->Email;
+			$login->usuario=$request->Nombre;
+			$login->password=$request->IdMatricula;
+			$login->tipo='Alumno';
+			$login->Registro='si';
+
+			$login->save();
+		
+		Session::flash('mensaje','Tu usaurio para ingesar es :  '.$Nombre.' y Tu contraseña sera  ' . $IdMatricula);	
+			return redirect()->back();
+		
+
 	}
+
+	public function C_alumno(){
+		$Alumnos=Alumnos::withTrashed()->orderBy('IdMatricula','asc')->get();
+
+		if(Session::get('sesionid')!="")
+		return view('Alumnos.Consulta')
+		->with('Alumnos',$Alumnos);
+								  else{
+									  Session::flash('error', 'Debe iniciar sesion');
+									  return redirect()->route('login');
+								  }
+		
+	}
+
+	public function Des_Alumno($IdMatricula)
+    {
+        Alumnos::find($IdMatricula)->delete();
+
+        return redirect()->back();  
+    }
+    //Activación
+    public function Act_Alumno($IdMatricula)
+    {
+        Alumnos::withTrashed()->where('IdMatricula',$IdMatricula)->restore();
+
+        return redirect()->back();
+    }
+    //Eliminación Física
+public function Del_Alumno($IdMatricula){
+    Alumnos::withTrashed()->where('IdMatricula',$IdMatricula)->forceDelete();
+    return redirect()->back();
+}
 }

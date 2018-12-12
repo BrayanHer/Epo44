@@ -16,6 +16,7 @@
                 $table->string('usuario',100);
                 $table->string('password',100);
                 $table->string('tipo',50);
+                $table->string('registro',3);
 
                 $table->rememberToken();
                 $table->timestamps();

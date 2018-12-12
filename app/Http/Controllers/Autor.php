@@ -8,6 +8,7 @@
  use Illuminate\Support\Facades\Input;
  use Illuminate\Support\Facades\Response;
  use Illuminate\Support\Facades\Validator;
+ use Session;
 
  use App\autores;
 
@@ -25,11 +26,20 @@
                     $IdAutor = $clavequesigueA[0]->IdAutor + 1;
                 }
         //Consulta
+
+        
             $Autores = autores::withTrashed()->orderBy('IdAutor', 'asc') //withTrashed -> todos ->eliminados (lógico) o no
                                         ->get();
-                return view ("Biblioteca.Autores")
-                ->with('IdAutor', $IdAutor)
-                ->with('Autores', $Autores);
+
+                                        if(Session::get('sesionidu')!="")
+                                        return view ("Biblioteca.Autores")
+                                        ->with('IdAutor', $IdAutor)
+                                        ->with('Autores', $Autores);
+                                  else{
+                                      Session::flash('error', 'Debe iniciar sesion');
+                                      return redirect()->route('login');
+                                  }
+          
             }
 
             public function GAutores(Request $request){
@@ -82,8 +92,14 @@
         public function MAutor($IdAutor){
             $autor = autores::where('IdAutor', '=', $IdAutor)
                                             ->get();
-                return view ("Biblioteca.MAutor")
-                ->with('autor', $autor[0]);
+                                            if(Session::get('sesionidu')!="")
+                                            return view ("Biblioteca.MAutor")
+                                             ->with('autor', $autor[0]);
+                                      else{
+                                          Session::flash('error', 'Debe iniciar sesion');
+                                          return redirect()->route('login');
+                                      }
+               
         }
 
         public function GAutor(Request $request){

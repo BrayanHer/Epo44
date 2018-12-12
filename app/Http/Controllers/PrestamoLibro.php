@@ -11,6 +11,7 @@
  use App\categorias;
  use App\prestamoLibros;
  use App\alumnos;
+ use Session;
 
     class PrestamoLibro extends Controller
     {
@@ -35,12 +36,20 @@
                 FROM prestamolibros AS p
                 INNER JOIN Alumnos AS a ON a.IdMatricula = p.IdMatricula
                 INNER JOIN Libros AS l ON l.IdLibro = p.IdLibro");
+
+
+if(Session::get('sesionidu')!="")
+return view ("Biblioteca.PrestamoLibros")
+->with('IdPrestamo', $IdPrestamo)
+->with('Libros', $Libros)
+->with('Alumnos', $Alumnos)
+->with('Prestamo', $Prestamo);
+								  else{
+									  Session::flash('error', 'Debe iniciar sesion');
+									  return redirect()->route('login');
+								  }
                                                           
-                return view ("Biblioteca.PrestamoLibros")
-                    ->with('IdPrestamo', $IdPrestamo)
-                    ->with('Libros', $Libros)
-                    ->with('Alumnos', $Alumnos)
-                    ->with('Prestamo', $Prestamo);
+               
             }
        
             public function GPrestamos(Request $request){
@@ -98,11 +107,19 @@
                                         ->get();
                     $Libros = libros::where('IdLibro','!=',$IdLibro)
                                         ->get();
-                    return view ("Biblioteca.MPrestamo")
-                    ->with('prestamo', $prestamo[0])
-                    ->with('IdLibro', $IdLibro)
-                    ->with('Libro', $Libro[0]->Titulo)
-                    ->with('Libros', $Libros);
+
+
+                                        if(Session::get('sesionidu')!="")
+                                        return view ("Biblioteca.MPrestamo")
+                                        ->with('prestamo', $prestamo[0])
+                                        ->with('IdLibro', $IdLibro)
+                                        ->with('Libro', $Libro[0]->Titulo)
+                                        ->with('Libros', $Libros);
+								  else{
+									  Session::flash('error', 'Debe iniciar sesion');
+									  return redirect()->route('login');
+								  }
+                    
             }
 
             public function GPrestamo(Request $request){
