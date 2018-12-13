@@ -13,5 +13,5 @@ class usuarios extends Model
    protected $primaryKey = 'Idu';
    protected $fillable=['idu','nombre','correo','usuario','password','tipo'];
    
-   protected $date=['delete_at'];
+   protected $date=['deleted_at'];
 }

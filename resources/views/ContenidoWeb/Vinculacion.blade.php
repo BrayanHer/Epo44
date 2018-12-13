@@ -6,14 +6,9 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Stylish Portfolio - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="serv/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,52 +26,51 @@
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="content-section-heading text-center">
-          <h3 class="text-secondary mb-0">Portfolio</h3>
-          <h2 class="mb-5">Recent Projects</h2>
+          <h2 class="mb-5">Talleres</h2>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-6">
             <a class="portfolio-item" href="#">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Stationary</h2>
-                  <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                  <h2>Lectura y Redacción</h2>
+                  <p class="mb-0">Se ofrece un taller de lectura para los alumnos para reforzar su capacidad en Español</p>
                 </span>
               </span>
-              <img class="img-fluid" src="serv/img/portfolio-1.jpg" alt="">
+              <img class="img-fluid" src="serv/img/Biblioteca.jpg" alt="">
             </a>
           </div>
           <div class="col-lg-6">
             <a class="portfolio-item" href="#">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Ice Cream</h2>
-                  <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                  <h2>Baile</h2>
+                  <p class="mb-0">Cada mes se realiza un concurso de baile, en el cual los alumnos forman sus grupos y desarrollan su coreografía</p>
                 </span>
               </span>
-              <img class="img-fluid" src="serv/img/portfolio-2.jpg" alt="">
+              <img class="img-fluid" src="serv/img/Baile.jpg" alt="">
             </a>
           </div>
           <div class="col-lg-6">
             <a class="portfolio-item" href="#">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Strawberries</h2>
-                  <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                  <h2>Concurso de Ofrendas</h2>
+                  <p class="mb-0">Todos los años se realiza el concurso de ofrendas en la cual los alumnos representan cada cultura mexicana</p>
                 </span>
               </span>
-              <img class="img-fluid" src="serv/img/portfolio-3.jpg" alt="">
+              <img class="img-fluid" src="serv/img/Ofrenda.jpg" alt="">
             </a>
           </div>
           <div class="col-lg-6">
             <a class="portfolio-item" href="#">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Workspace</h2>
-                  <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                  <h2>Certificación Office</h2>
+                  <p class="mb-0">La Preparatoria ofrece a sus alumnos de tercer año una certificación en Office </p>
                 </span>
               </span>
-              <img class="img-fluid" src="serv/img/portfolio-4.jpg" alt="">
+              <img class="img-fluid" src="serv/img/Computacion.jpg" alt="">
             </a>
           </div>
         </div>

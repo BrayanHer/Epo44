@@ -33,23 +33,21 @@
             
              //Consulta
                 $Prestamo =\DB::select("SELECT p.IdPrestamo, CONCAT(a.IdMatricula,' ',a.Nombre,' ',a.APaterno,' ',a.AMaterno) AS 'Alumno' , l.Titulo, p.FechaPrestamo, p.FechaEntrega, p.deleted_at
-                FROM prestamolibros AS p
-                INNER JOIN Alumnos AS a ON a.IdMatricula = p.IdMatricula
-                INNER JOIN Libros AS l ON l.IdLibro = p.IdLibro");
+                FROM prestamoLibros AS p
+                INNER JOIN alumnos AS a ON a.IdMatricula = p.IdMatricula
+                INNER JOIN libros AS l ON l.IdLibro = p.IdLibro");
 
 
-if(Session::get('sesionidu')!="")
-return view ("Biblioteca.PrestamoLibros")
-->with('IdPrestamo', $IdPrestamo)
-->with('Libros', $Libros)
-->with('Alumnos', $Alumnos)
-->with('Prestamo', $Prestamo);
-								  else{
-									  Session::flash('error', 'Debe iniciar sesion');
-									  return redirect()->route('login');
-								  }
-                                                          
-               
+                if(Session::get('sesionidu')!="")
+                return view ("Biblioteca.PrestamoLibros")
+                        ->with('IdPrestamo', $IdPrestamo)
+                        ->with('Libros', $Libros)
+                        ->with('Alumnos', $Alumnos)
+                        ->with('Prestamo', $Prestamo);
+				else{
+		  		    Session::flash('error', 'Debe iniciar sesion');
+		 			    return redirect()->route('login');
+				  }
             }
        
             public function GPrestamos(Request $request){
@@ -108,18 +106,16 @@ return view ("Biblioteca.PrestamoLibros")
                     $Libros = libros::where('IdLibro','!=',$IdLibro)
                                         ->get();
 
-
-                                        if(Session::get('sesionidu')!="")
-                                        return view ("Biblioteca.MPrestamo")
-                                        ->with('prestamo', $prestamo[0])
-                                        ->with('IdLibro', $IdLibro)
-                                        ->with('Libro', $Libro[0]->Titulo)
-                                        ->with('Libros', $Libros);
-								  else{
-									  Session::flash('error', 'Debe iniciar sesion');
-									  return redirect()->route('login');
-								  }
-                    
+                    if(Session::get('sesionidu')!="")
+                        return view ("Biblioteca.MPrestamo")
+                                ->with('prestamo', $prestamo[0])
+                                ->with('IdLibro', $IdLibro)
+                                ->with('Libro', $Libro[0]->Titulo)
+                                ->with('Libros', $Libros);
+					else{
+	   				    Session::flash('error', 'Debe iniciar sesion');
+						    return redirect()->route('login');
+			        }       
             }
 
             public function GPrestamo(Request $request){

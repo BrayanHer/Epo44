@@ -7,7 +7,6 @@
 	padding:1px;
 }
 </style>
-y
     <form action="{{route('GPrestamos')}}" method="POST" enctype='multipart/form-data'>                        
    		{{csrf_field()}}
 		<div class="container">
@@ -106,7 +105,7 @@ y
 				<thead align="center" class="thead-dark col-md-12">
 					<tr>
 						<th scope="col-md-10">Clave</th>
-						<th scope="col-md-10">Matrícula</th>
+						<th scope="col-md-10">Alumno</th>
                         <th scope="col-md-10">Libro</th>
 						<th scope="col-md-10">Fecha de Prestamo</th>
 						<th scope="col-md-10">Fecha de Entrega</th>
