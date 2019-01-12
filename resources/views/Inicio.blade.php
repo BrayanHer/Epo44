@@ -86,9 +86,8 @@
 						<div class="bg-img bg-img-3"></div>
 						<div class="slide-caption">
                             <div class="caption-content">
-                                <h2>Conoce nuestras carreras</h2>
-                                <
-                               
+                                <h2>Conoce nuestros Talleres </h2>
+                                <a href="{{route('Vinculacion')}}" class="btn btn-blue btn-effect">Explora los Talleres</a>
                             </div>
                         </div>
 

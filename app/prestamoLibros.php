@@ -9,9 +9,9 @@ class prestamoLibros extends Model
 {
     use SoftDeletes;
     
-    protected $table = 'prestamolibros';
+    protected $table = 'prestamoLibros';
     protected $primaryKey ='IdPrestamo';
     protected $fillable=['IdPrestamo','IdMatricula','IdLibro','FechaPrestamo','FechaEntrega'];
 
-    protected $data = ['delete_at'];
+    protected $data = ['deleted_at'];
 }
