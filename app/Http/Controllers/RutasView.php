@@ -9,6 +9,14 @@
     {
 
         // Pagina Web 
+        public function inicio()
+        {
+            return view('inicio');
+        }
+        public function index()
+        {
+            return view('apin');
+        }
  public function index_Al()
         {
             return view('home');

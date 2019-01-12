@@ -260,7 +260,7 @@
   </div>
   <div>
                         @yield('admincontent')
-                  </div> Hola
+                  </div> 
 </body>
 
 </html>

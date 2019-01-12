@@ -46,12 +46,12 @@
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <h1> <a href="{{route('home')}}" class="scrollto"> Epo <span> &nbsp; No.44 </span> </a> </h1>
+        <h1> <a href="{{route('apin')}}" class="scrollto"> Epo <span> &nbsp; No.44 </span> </a> </h1>
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-        <li class="menu-active"> <a href=""> Inicio </a> </li>
+        <li class="menu-active"> <a href="{{route('apin')}}"> Inicio </a> </li>
           <li> <a href="{{route('Servicios')}}"> Servicios y Tramites </a> </li><!--poner la vista respectiva con el codigo "('aqui va el nombre de la ruta')"-->
           <li> <a href="{{route('Acerca')}}"> Acerca de la EPO No.44 </a> </li>
           <li> <a href="{{route('Vinculacion')}}"> Vinculación </a> </li>

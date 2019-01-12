@@ -46,12 +46,12 @@
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
-        <h1> <a href="" class="scrollto"> Epo <span> &nbsp; No.44 </span> </a> </h1>
+        <h1> <a href="{{route('apin')}}" class="scrollto"> Epo <span> &nbsp; No.44 </span> </a> </h1>
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"> <a href=""> Inicio </a> </li>
+          <li class="menu-active"> <a href="{{route('apin')}}"> Inicio </a> </li>
         
             <li> <a href="{{route('Servicios')}}"> Servicios y Tramites </a> </li>
           
